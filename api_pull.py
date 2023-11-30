@@ -69,9 +69,8 @@ for title, url in url_dict.items():
                 collection = db[title]
                 collection.insert_many(df.to_dict('records'))
                 df_dict[title] = df
-                print("SUCCESSFUL REQUEST: JSON")
                 break  # If the request was successful, break the loop
-        except Exception as error:
+        except Exception as error: # If not successful
             print(error)
             print("testing csv...")
             time.sleep(2)
@@ -84,9 +83,29 @@ for title, url in url_dict.items():
                     collection = db[title]
                     collection.insert_many(df.to_dict('records'))
                     df_dict[title] = df
-                    print("SUCCESSFUL REQUEST: CSV")
                     break  # If the request was successful, break the loop
             except Exception as error:
                 print(error)
                 print("ChunkedEncodingError occurred, retrying...")
+<<<<<<< HEAD
                 time.sleep(5)
+=======
+                time.sleep(5)
+
+def check_df_dict(df_dict):
+    if len(df_dict) == len(url_dict):
+        print("\nAll dataframes were successfully created.\n")
+    else:
+        print("\nError: Some dataframes were not created.\n")
+
+check_df_dict(df_dict)
+
+def print_df_dict(df_dict):
+    for title, df in df_dict.items():
+        print(title)
+        print(df.head())
+        print(df.shape)
+        print("\n")
+
+print(df_dict)
+>>>>>>> 62c43a7c41aaaf543bfbd6c92c374dc670cdb407

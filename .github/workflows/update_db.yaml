@@ -1,0 +1,36 @@
+name: Update CCC Database
+
+on:
+  schedule:
+    - cron: '0 0 1 * 1'
+  workflow_dispatch:
+
+jobs:
+  update_ccc_data:
+    name: Update CCC data periodically
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Script
+        env:
+          MONGODB_CONNECTION_STRING: ${{ mongodb+srv://rdelano6:%@Fr%@nklin@cccdb.xglq5nq.mongodb.net/?retryWrites=true&w=majority }}
+        run: |
+          python api_pull.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git commit -m "Updated API data on `date` with GitHub Actions" || echo "No Changes to Commit"
+          git push origin master || echo "No Changes to Commit"
