@@ -18,13 +18,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.6'
-          cache: 'pip'
+          python-version: '3.11'
 
-      - name: Install Dependencies
+      - name: Upgrade pip
+        run: pip install --upgrade pip
+
+      - name: Install virtualenv
+        run: pip install virtualenv
+
+      - name: Set up virtual environment
+        run: virtualenv venv
+
+      - name: Activate virtual environment
+        run: source venv/bin/activate
+
+      - name: Install dependencies
         run: pip install -r requirements.txt
 
       - name: Run Script
