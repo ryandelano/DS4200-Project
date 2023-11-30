@@ -87,9 +87,6 @@ for title, url in url_dict.items():
             except Exception as error:
                 print(error)
                 print("ChunkedEncodingError occurred, retrying...")
-<<<<<<< HEAD
-                time.sleep(5)
-=======
                 time.sleep(5)
 
 def check_df_dict(df_dict):
@@ -100,12 +97,11 @@ def check_df_dict(df_dict):
 
 check_df_dict(df_dict)
 
-def print_df_dict(df_dict):
-    for title, df in df_dict.items():
-        print(title)
-        print(df.head())
-        print(df.shape)
-        print("\n")
+# def print_df_dict(df_dict):
+#     for title, df in df_dict.items():
+#         print(title)
+#         print(df.head())
+#         print(df.shape)
+#         print("\n")
 
-print(df_dict)
->>>>>>> 62c43a7c41aaaf543bfbd6c92c374dc670cdb407
+# print(df_dict)
