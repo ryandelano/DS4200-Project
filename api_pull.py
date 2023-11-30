@@ -94,7 +94,15 @@ def check_df_dict(df_dict):
     else:
         print("\nError: Some dataframes were not created.\n")
 
+def store_df_dict(df_dict):
+    for title, df in df_dict.items():
+        db = client['ccc']
+        collection = db[title]
+        collection.insert_many(df.to_dict('records'))
+
+
 check_df_dict(df_dict)
+store_df_dict(df_dict)
 
 # def print_df_dict(df_dict):
 #     for title, df in df_dict.items():
