@@ -24,7 +24,7 @@ jobs:
 
       - name: Run Script
         env:
-          MONGODB_CONNECTION_STRING: ${{ mongodb+srv://rdelano6:%40Fr%40nklin@cccdb.xglq5nq.mongodb.net/?retryWrites=true&w=majority }}
+          MONGODB_CONNECTION_STRING: ${{ secrets.MONGODB_CONNECTION_STRING }}
         run: |
           python api_pull.py
 

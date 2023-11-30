@@ -4,15 +4,14 @@ import pandas as pd
 import requests
 import random as rnd
 import time
-import json
 import io
-import pymongo
+import os
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-uri = "mongodb+srv://rdelano6:%40100Fr%40nklin@cccdb.xglq5nq.mongodb.net/?retryWrites=true&w=majority"
+MONGODB_CONNECTION_STRING = os.environ.get('MONGODB_CONNECTION_STRING')
 # Create a new client and connect to the server
-client = MongoClient(uri, server_api=ServerApi('1'))
+client = MongoClient(MONGODB_CONNECTION_STRING, server_api=ServerApi('1'))
 # Send a ping to confirm a successful connection
 try:
     client.admin.command('ping')
