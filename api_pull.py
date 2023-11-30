@@ -64,9 +64,6 @@ for title, url in url_dict.items():
                 content = response.content.decode('utf-8-sig')  # Decode using 'utf-8-sig'
                 data = json.loads(content)  # Parse the decoded content as JSON
                 df = pd.DataFrame(data)
-                db = client['ccc']
-                collection = db[title]
-                collection.insert_many(df.to_dict('records'))
                 df_dict[title] = df
                 break  # If the request was successful, break the loop
         except Exception as error: # If not successful
@@ -78,9 +75,6 @@ for title, url in url_dict.items():
                     content = response.content.decode('utf-8-sig') # Decode using 'utf-8-sig'
                     data = io.StringIO(content)  # Parse the decoded content as csv
                     df = pd.read_csv(data)
-                    db = client['ccc']
-                    collection = db[title]
-                    collection.insert_many(df.to_dict('records'))
                     df_dict[title] = df
                     break  # If the request was successful, break the loop
             except Exception as error:
