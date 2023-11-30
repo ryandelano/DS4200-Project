@@ -84,6 +84,7 @@ Deprecated==1.2.14
 diff-match-patch @ file:///Users/ktietz/demo/mc3/conda-bld/diff-match-patch_1630511840874/work
 dill @ file:///Users/cbousseau/work/recipes/ci_py311/dill_1677926161443/work
 distributed @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_46b2z6ud_6/croot/distributed_1686866053959/work
+dnspython==2.4.2
 docstring-to-markdown @ file:///Users/cbousseau/work/recipes/ci_py311/docstring-to-markdown_1677931891483/work
 docutils @ file:///Users/cbousseau/work/recipes/ci_py311/docutils_1677907269557/work
 entrypoints @ file:///Users/cbousseau/work/recipes/ci_py311/entrypoints_1677911798787/work
@@ -264,6 +265,7 @@ PyJWT==2.8.0
 pylint @ file:///Users/cbousseau/work/recipes/ci_py311/pylint_1677933699245/work
 pylint-venv @ file:///Users/cbousseau/work/recipes/ci_py311/pylint-venv_1677961443839/work
 pyls-spyder==0.4.0
+pymongo==4.6.1
 PyMuPDF==1.23.5
 PyMuPDFb==1.23.5
 pyngrok @ file:///home/conda/feedstock_root/build_artifacts/pyngrok_1695228829611/work
