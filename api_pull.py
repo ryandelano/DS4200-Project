@@ -6,6 +6,19 @@ import random as rnd
 import time
 import json
 import io
+import pymongo
+
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+uri = "mongodb+srv://rdelano6:%@100Fr%@nklin@cccdb.xglq5nq.mongodb.net/?retryWrites=true&w=majority"
+# Create a new client and connect to the server
+client = MongoClient(uri, server_api=ServerApi('1'))
+# Send a ping to confirm a successful connection
+try:
+    client.admin.command('ping')
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)
 
 url_dict = {
     "approved_apps" : "https://masscannabiscontrol.com/resource/hmwt-yiqy",
@@ -52,6 +65,9 @@ for title, url in url_dict.items():
                 content = response.content.decode('utf-8-sig')  # Decode using 'utf-8-sig'
                 data = json.loads(content)  # Parse the decoded content as JSON
                 df = pd.DataFrame(data)
+                db = client['ccc']
+                collection = db[title]
+                collection.insert_many(df.to_dict('records'))
                 df_dict[title] = df
                 print("SUCCESSFUL REQUEST: JSON")
                 break  # If the request was successful, break the loop
@@ -64,6 +80,9 @@ for title, url in url_dict.items():
                     content = response.content.decode('utf-8-sig') # Decode using 'utf-8-sig'
                     data = io.StringIO(content)  # Parse the decoded content as csv
                     df = pd.read_csv(data)
+                    db = client['ccc']
+                    collection = db[title]
+                    collection.insert_many(df.to_dict('records'))
                     df_dict[title] = df
                     print("SUCCESSFUL REQUEST: CSV")
                     break  # If the request was successful, break the loop
@@ -71,9 +90,3 @@ for title, url in url_dict.items():
                 print(error)
                 print("ChunkedEncodingError occurred, retrying...")
                 time.sleep(5)
-
-for title, df in df_dict.items():
-    print(title)
-    print(df.head())
-    print(df.shape)
-    print("\n")
