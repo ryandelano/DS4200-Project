@@ -1,11 +1,28 @@
 import json
+from tkinter import LAST
 
 import pandas as pd
 import requests
 import random as rnd
 import time
-import json
 import io
+import os
+
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+from bs4 import BeautifulSoup as bs
+
+# Set the MongoDB server API version
+MONGODB_CONNECTION_STRING = os.environ.get('MONGODB_CONNECTION_STRING')
+LAST_UPDATED_DATE = os.environ.get('LAST_UPDATED_DATE')
+# Create a new client and connect to the server
+client = MongoClient(MONGODB_CONNECTION_STRING)
+# Send a ping to confirm a successful connection
+try:
+    client.admin.command('ping')
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)
 
 url_dict = {
     "approved_apps" : "https://masscannabiscontrol.com/resource/hmwt-yiqy",
@@ -36,7 +53,7 @@ user_agents = [
 header = {
     'User-Agent': rnd.choice(user_agents),
     'Accept-Language': 'en-US, en;q=0.5',
-    'Accept-Encoding': 'gzip, deflate, br',
+    'Accept-Encoding': 'gzip, deflate',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,*/*;q=0.7,*/*;q=0.5',
     'Referer': 'https://www.mass.gov',
     'DNT': '1'
@@ -76,13 +93,34 @@ def check_df_dict(df_dict):
     else:
         print("\nError: Some dataframes were not created.\n")
 
+def store_df_dict(df_dict):
+    for title, df in df_dict.items():
+        db = client['ccc']
+        collection = db[title]
+        collection.insert_many(df.to_dict('records'))
+        df.to_csv(f'./data/{title}.csv', index=False)
+
+def get_last_date():
+
+    contents = bs(requests.get("https://masscannabiscontrol.com/open-data/data-catalog/").content, "html.parser", from_encoding="utf-8")
+    for strong in contents.find_all('strong'):
+        if "Menu" not in strong.text:
+            last_date = strong.text.split(" ")[-1]
+            return last_date
+
 check_df_dict(df_dict)
 
-def print_df_dict(df_dict):
-    for title, df in df_dict.items():
-        print(title)
-        print(df.head())
-        print(df.shape)
-        print("\n")
+if get_last_date() != LAST_UPDATED_DATE:
+    LAST_UPDATED_DATE = get_last_date()
+    store_df_dict(df_dict)
+else:
+    print("No new data available.")
 
-print(df_dict)
+# def print_df_dict(df_dict):
+#     for title, df in df_dict.items():
+#         print(title)
+#         print(df.head())
+#         print(df.shape)
+#         print("\n")
+
+# print(df_dict)

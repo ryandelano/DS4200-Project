@@ -1,0 +1,52 @@
+name: Update CCC Database
+
+on:
+  schedule:
+    - cron: '0 0 1 * 1'
+  workflow_dispatch:
+
+jobs:
+  update_ccc_data:
+    name: Update CCC data periodically
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11'
+
+      - name: Upgrade pip
+        run: pip install --upgrade pip
+
+      - name: Install virtualenv
+        run: pip install virtualenv
+
+      - name: Set up virtual environment
+        run: virtualenv venv
+
+      - name: Activate virtual environment
+        run: source venv/bin/activate
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Script
+        env:
+          MONGODB_CONNECTION_STRING: ${{ secrets.MONGODB_CONNECTION_STRING }}
+        run: |
+          python api_pull.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git commit -m "Updated API data on `date` with GitHub Actions" || echo "No Changes to Commit"
+          git push origin master || echo "No Changes to Commit"
