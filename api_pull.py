@@ -151,18 +151,17 @@ def print_df_dict(df_dict):
         print("\n")
 
 
-def main():
-    global LAST_UPDATED_DATE
+def main(git_date):
     client = connect_to_mongo()
     get_df_dict(url_dict)
     check_df_dict(df_dict)
     # print_df_dict(df_dict)
-    if get_last_date() != LAST_UPDATED_DATE:
-        LAST_UPDATED_DATE = get_last_date()
+    if get_last_date() != git_date:
+        git_date = get_last_date()
         store_df_dict(client, df_dict)
     else:
         print("No new data available.")
 
 if __name__ == "__main__":
-    main()
+    main(LAST_UPDATED_DATE)
 
