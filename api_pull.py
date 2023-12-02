@@ -1,5 +1,4 @@
 import json
-from tkinter import LAST
 
 import pandas as pd
 import requests
@@ -9,7 +8,6 @@ import io
 import os
 
 from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
 from bs4 import BeautifulSoup as bs
 
 # Set the MongoDB server API version
@@ -61,31 +59,32 @@ header = {
 
 df_dict = {}
 
-for title, url in url_dict.items():
-    print(title)
-    for _ in range(5):  # Retry up to 5 times
-        try:
-            with requests.get(url + ".json", headers=header, stream=False) as response:
-                content = response.content.decode('utf-8-sig')  # Decode using 'utf-8-sig'
-                data = json.loads(content)  # Parse the decoded content as JSON
-                df = pd.DataFrame(data)
-                df_dict[title] = df
-                break  # If the request was successful, break the loop
-        except Exception as error: # If not successful
-            print(error)
-            print("testing csv...")
-            time.sleep(2)
+def get_df_dict(url_dict):
+    for title, url in url_dict.items():
+        print(title)
+        for _ in range(5):  # Retry up to 5 times
             try:
-                with requests.get(url + ".csv", headers=header, stream=False) as response:
-                    content = response.content.decode('utf-8-sig') # Decode using 'utf-8-sig'
-                    data = io.StringIO(content)  # Parse the decoded content as csv
-                    df = pd.read_csv(data)
+                with requests.get(url + ".json", headers=header, stream=False) as response:
+                    content = response.content.decode('utf-8-sig')  # Decode using 'utf-8-sig'
+                    data = json.loads(content)  # Parse the decoded content as JSON
+                    df = pd.DataFrame(data)
                     df_dict[title] = df
                     break  # If the request was successful, break the loop
-            except Exception as error:
+            except Exception as error: # If not successful
                 print(error)
-                print("ChunkedEncodingError occurred, retrying...")
-                time.sleep(5)
+                print("testing csv...")
+                time.sleep(2)
+                try:
+                    with requests.get(url + ".csv", headers=header, stream=False) as response:
+                        content = response.content.decode('utf-8-sig') # Decode using 'utf-8-sig'
+                        data = io.StringIO(content)  # Parse the decoded content as csv
+                        df = pd.read_csv(data)
+                        df_dict[title] = df
+                        break  # If the request was successful, break the loop
+                except Exception as error:
+                    print(error)
+                    print("ChunkedEncodingError occurred, retrying...")
+                    time.sleep(5)
 
 def check_df_dict(df_dict):
     if len(df_dict) == len(url_dict):
@@ -108,19 +107,25 @@ def get_last_date():
             last_date = strong.text.split(" ")[-1]
             return last_date
 
-check_df_dict(df_dict)
+def print_df_dict(df_dict):
+    for title, df in df_dict.items():
+        print(title)
+        print(df.head())
+        print(df.shape)
+        print("\n")
 
-if get_last_date() != LAST_UPDATED_DATE:
-    LAST_UPDATED_DATE = get_last_date()
-    store_df_dict(df_dict)
-else:
-    print("No new data available.")
 
-# def print_df_dict(df_dict):
-#     for title, df in df_dict.items():
-#         print(title)
-#         print(df.head())
-#         print(df.shape)
-#         print("\n")
+def main():
+    global LAST_UPDATED_DATE
+    get_df_dict(url_dict)
+    check_df_dict(df_dict)
+    # print_df_dict(df_dict)
+    if get_last_date() != LAST_UPDATED_DATE:
+        LAST_UPDATED_DATE = get_last_date()
+        store_df_dict(df_dict)
+    else:
+        print("No new data available.")
 
-# print(df_dict)
+if __name__ == "__main__":
+    main()
+
