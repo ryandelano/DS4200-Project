@@ -13,14 +13,6 @@ from bs4 import BeautifulSoup as bs
 # Set the MongoDB server API version
 MONGODB_CONNECTION_STRING = os.environ.get('MONGODB_CONNECTION_STRING')
 LAST_UPDATED_DATE = os.environ.get('LAST_UPDATED_DATE')
-# Create a new client and connect to the server
-client = MongoClient(MONGODB_CONNECTION_STRING)
-# Send a ping to confirm a successful connection
-try:
-    client.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
-except Exception as e:
-    print(e)
 
 url_dict = {
     "approved_apps" : "https://masscannabiscontrol.com/resource/hmwt-yiqy",
@@ -60,6 +52,11 @@ header = {
 df_dict = {}
 
 def get_df_dict(url_dict):
+    """Get dataframes from a dictionary of urls that store CCC API data.
+
+    Args:
+        url_dict (dict ): A dictionary of urls that store CCC API data.
+    """
     for title, url in url_dict.items():
         print(title)
         for _ in range(5):  # Retry up to 5 times
@@ -87,12 +84,42 @@ def get_df_dict(url_dict):
                     time.sleep(5)
 
 def check_df_dict(df_dict):
+    """Check if all dataframes were successfully created.
+
+    Args:
+        df_dict (dict of dfs): A dictionary of dataframes.
+    """
     if len(df_dict) == len(url_dict):
         print("\nAll dataframes were successfully created.\n")
     else:
         print("\nError: Some dataframes were not created.\n")
 
-def store_df_dict(df_dict):
+def connect_to_mongo():
+    """Connect to MongoDB server.
+
+    Returns:
+        client : A MongoClient object.
+    """
+
+    # Set the MongoDB server API version
+    MONGODB_CONNECTION_STRING = os.environ.get('MONGODB_CONNECTION_STRING')
+    # Create a new client and connect to the server
+    client = MongoClient(MONGODB_CONNECTION_STRING)
+    # Send a ping to confirm a successful connection
+    try:
+        client.admin.command('ping')
+        print("Pinged your deployment. You successfully connected to MongoDB!")
+        return client
+    except Exception as e:
+        return print(e)
+
+def store_df_dict(client, df_dict):
+    """Store dataframes in MongoDB.
+
+    Args:
+        client (MongoDB object): MongoDB connection object.
+        df_dict (dict of dfs): A dictionary of dataframes.
+    """
     for title, df in df_dict.items():
         db = client['ccc']
         collection = db[title]
@@ -100,7 +127,11 @@ def store_df_dict(df_dict):
         df.to_csv(f'./data/{title}.csv', index=False)
 
 def get_last_date():
+    """Get the last date that the CCC API was updated from the CCC website.
 
+    Returns:
+        last_date : The last date that the CCC API was updated from the CCC website.
+    """
     contents = bs(requests.get("https://masscannabiscontrol.com/open-data/data-catalog/").content, "html.parser", from_encoding="utf-8")
     for strong in contents.find_all('strong'):
         if "Menu" not in strong.text:
@@ -108,6 +139,11 @@ def get_last_date():
             return last_date
 
 def print_df_dict(df_dict):
+    """Print the first 5 rows, shape, and column names of each dataframe in a dictionary of dataframes.
+
+    Args:
+        df_dict (dict of dfs): A dictionary of dataframes.
+    """
     for title, df in df_dict.items():
         print(title)
         print(df.head())
@@ -117,12 +153,13 @@ def print_df_dict(df_dict):
 
 def main():
     global LAST_UPDATED_DATE
+    client = connect_to_mongo()
     get_df_dict(url_dict)
     check_df_dict(df_dict)
     # print_df_dict(df_dict)
     if get_last_date() != LAST_UPDATED_DATE:
         LAST_UPDATED_DATE = get_last_date()
-        store_df_dict(df_dict)
+        store_df_dict(client, df_dict)
     else:
         print("No new data available.")
 
