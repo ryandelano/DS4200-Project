@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup as bs
 MONGODB_CONNECTION_STRING = os.environ.get('MONGODB_CONNECTION_STRING')
 LAST_UPDATED_DATE = os.environ.get('LAST_UPDATED_DATE')
 
-url_dict = {
+url_dict = { # Dictionary of urls that store CCC API data
     "approved_apps" : "https://masscannabiscontrol.com/resource/hmwt-yiqy",
     "pending_apps" : "https://masscannabiscontrol.com/resource/piib-tj3f",
     "dbe_apps" : "https://masscannabiscontrol.com/resource/5dkg-e39p",
@@ -30,7 +30,7 @@ url_dict = {
     "facility_sales" : "https://masscannabiscontrol.com/resource/fren-z7jq"
 }
 
-user_agents = [
+user_agents = [ # List of user agents to avoid 403 error, randomly select one for each request
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
@@ -40,7 +40,7 @@ user_agents = [
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15"
 ]
 
-header = {
+header = { # Set the header to avoid 403 error
     'User-Agent': rnd.choice(user_agents),
     'Accept-Language': 'en-US, en;q=0.5',
     'Accept-Encoding': 'gzip, deflate',
