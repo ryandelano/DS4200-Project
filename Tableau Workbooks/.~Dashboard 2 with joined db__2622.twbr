@@ -1,0 +1,3004 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20232.23.0805.0415                               -->
+<workbook original-version='18.1' source-build='2023.2.1 (20232.23.0805.0415)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <BasicButtonObject />
+    <BasicButtonObjectTextSupport />
+    <CollapsiblePane />
+    <_.fcp.ExternalImageContentForZones.true...ExternalImageContentForZones />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.RelationshipCalculations.true...RelationshipCalculations />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Cannabis DB' inline='true' name='federated.0kchunr0ucreps1faesn51swnx01' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Project data' name='textscan.0sygxa30ipxqbn1ea0n941pcwzsu'>
+            <connection class='textscan' directory='/Users/jeffreypan/Documents/Information Visualization/Github/DS4200-Project/data' filename='approved_pending_reopened_apps.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0sygxa30ipxqbn1ea0n941pcwzsu' name='approved_pending_reopened_apps.csv' table='[approved_pending_reopened_apps#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='CCCLastUpdated' ordinal='0' />
+            <column datatype='string' name='application_status' ordinal='1' />
+            <column datatype='string' name='license_type' ordinal='2' />
+            <column datatype='string' name='APPLICATION_CLASSIFICATION' ordinal='3' />
+            <column datatype='string' name='APPLICATION_CLASSIFICATION - Split 1' ordinal='4' />
+            <column datatype='string' name='APPLICATION_CLASSIFICATION - Split 2' ordinal='5' />
+            <column datatype='string' name='APPROVED_LICENSE_TYPE' ordinal='6' />
+            <column datatype='string' name='Approved_License_Stages' ordinal='7' />
+            <column datatype='date' name='commence_operations_date' ordinal='8' />
+            <column datatype='string' name='lic_status' ordinal='9' />
+            <column datatype='string' name='license_number' ordinal='10' />
+            <column datatype='string' name='business_name' ordinal='11' />
+            <column datatype='string' name='establishment_city' ordinal='12' />
+            <column datatype='string' name='establishment_zipcode' ordinal='13' />
+            <column datatype='string' name='BUSINESS_EMAIL' ordinal='14' />
+            <column datatype='string' name='BUSINESS_PHONE' ordinal='15' />
+            <column datatype='string' name='business_address_1' ordinal='16' />
+            <column datatype='string' name='business_address_2' ordinal='17' />
+            <column datatype='string' name='business_city' ordinal='18' />
+            <column datatype='string' name='business_state' ordinal='19' />
+            <column datatype='integer' name='business_zipcode' ordinal='20' />
+            <column datatype='string' name='geocoded_county' ordinal='21' />
+            <column datatype='string' name='geocoded_address' ordinal='22' />
+            <column datatype='string' name='mailing_address_1' ordinal='23' />
+            <column datatype='string' name='mailing_address_2' ordinal='24' />
+            <column datatype='string' name='mailing_city' ordinal='25' />
+            <column datatype='string' name='mailing_state' ordinal='26' />
+            <column datatype='integer' name='mailing_zipcode' ordinal='27' />
+            <column datatype='string' name='EIN_TIN' ordinal='28' />
+            <column datatype='string' name='APPLICATION_NUMBER' ordinal='29' />
+            <column datatype='datetime' name='SUBMITTED_DATE' ordinal='30' />
+            <column datatype='datetime' name='FIRST_COMPLIANCE_REVIEW_DATE' ordinal='31' />
+            <column datatype='datetime' name='LIC_FEE_PAYMENT_SUBMITTED_DATE' ordinal='32' />
+            <column datatype='boolean' name='PRIORITY' ordinal='33' />
+            <column datatype='string' name='FEE_WAIVER_REQUEST' ordinal='34' />
+            <column datatype='string' name='FEE_WAIVER_EE_OR_SE_NUMBER' ordinal='35' />
+            <column datatype='string' name='EE_PRIORITY_STATUS' ordinal='36' />
+            <column datatype='string' name='EE_PRIORITY_NUMBER_FROM_ACCOUNT' ordinal='37' />
+            <column datatype='string' name='EE_PRIORITY_NUMBER_FROM_APPLICATION' ordinal='38' />
+            <column datatype='string' name='RMD_PRIORITY_STATUS' ordinal='39' />
+            <column datatype='string' name='RMD_PRIORITY_NUMBER_FROM_ACCOUNT' ordinal='40' />
+            <column datatype='string' name='RMD_PRIORITY_NUMBER_FROM_APPLICATION' ordinal='41' />
+            <column datatype='string' name='dbe' ordinal='42' />
+            <column datatype='string' name='cultivation_environment' ordinal='43' />
+            <column datatype='string' name='cultivation_tier' ordinal='44' />
+            <column datatype='datetime' name='cnb_dt_of_final_licensure' ordinal='45' />
+            <column datatype='datetime' name='APPLICATION_CREATED_DATE' ordinal='46' />
+            <column datatype='datetime' name='CNB_DEEMED_COMPLETE_DATE' ordinal='47' />
+            <column datatype='datetime' name='APPLICATION_APPROVED_DATE' ordinal='48' />
+            <column datatype='datetime' name='LIC_START_DATE' ordinal='49' />
+            <column datatype='datetime' name='LIC_EXPIRATION_DATE' ordinal='50' />
+            <column datatype='string' name='PMT_AMOUNT' ordinal='51' />
+            <column datatype='integer' name='LIC_FEE_AMOUNT' ordinal='52' />
+            <column datatype='integer' name='ZIP' ordinal='53' />
+            <column datatype='string' name='Town' ordinal='54' />
+            <column datatype='string' name='county' ordinal='55' />
+            <column datatype='real' name='county_lat' ordinal='56' />
+            <column datatype='real' name='county_long' ordinal='57' />
+            <column datatype='string' name='Region' ordinal='58' />
+            <column datatype='date' name='CCCUpdateDate' ordinal='59' />
+            <column datatype='string' name='ESTABLISHMENT_ADDRESS_2' ordinal='60' />
+            <column datatype='string' name='establishment_state' ordinal='61' />
+            <column datatype='real' name='latitude' ordinal='62' />
+            <column datatype='real' name='longitude' ordinal='63' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0sygxa30ipxqbn1ea0n941pcwzsu' name='approved_pending_reopened_apps.csv' table='[approved_pending_reopened_apps#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='date' name='CCCLastUpdated' ordinal='0' />
+              <column datatype='string' name='application_status' ordinal='1' />
+              <column datatype='string' name='license_type' ordinal='2' />
+              <column datatype='string' name='APPLICATION_CLASSIFICATION' ordinal='3' />
+              <column datatype='string' name='APPLICATION_CLASSIFICATION - Split 1' ordinal='4' />
+              <column datatype='string' name='APPLICATION_CLASSIFICATION - Split 2' ordinal='5' />
+              <column datatype='string' name='APPROVED_LICENSE_TYPE' ordinal='6' />
+              <column datatype='string' name='Approved_License_Stages' ordinal='7' />
+              <column datatype='date' name='commence_operations_date' ordinal='8' />
+              <column datatype='string' name='lic_status' ordinal='9' />
+              <column datatype='string' name='license_number' ordinal='10' />
+              <column datatype='string' name='business_name' ordinal='11' />
+              <column datatype='string' name='establishment_city' ordinal='12' />
+              <column datatype='string' name='establishment_zipcode' ordinal='13' />
+              <column datatype='string' name='BUSINESS_EMAIL' ordinal='14' />
+              <column datatype='string' name='BUSINESS_PHONE' ordinal='15' />
+              <column datatype='string' name='business_address_1' ordinal='16' />
+              <column datatype='string' name='business_address_2' ordinal='17' />
+              <column datatype='string' name='business_city' ordinal='18' />
+              <column datatype='string' name='business_state' ordinal='19' />
+              <column datatype='integer' name='business_zipcode' ordinal='20' />
+              <column datatype='string' name='geocoded_county' ordinal='21' />
+              <column datatype='string' name='geocoded_address' ordinal='22' />
+              <column datatype='string' name='mailing_address_1' ordinal='23' />
+              <column datatype='string' name='mailing_address_2' ordinal='24' />
+              <column datatype='string' name='mailing_city' ordinal='25' />
+              <column datatype='string' name='mailing_state' ordinal='26' />
+              <column datatype='integer' name='mailing_zipcode' ordinal='27' />
+              <column datatype='string' name='EIN_TIN' ordinal='28' />
+              <column datatype='string' name='APPLICATION_NUMBER' ordinal='29' />
+              <column datatype='datetime' name='SUBMITTED_DATE' ordinal='30' />
+              <column datatype='datetime' name='FIRST_COMPLIANCE_REVIEW_DATE' ordinal='31' />
+              <column datatype='datetime' name='LIC_FEE_PAYMENT_SUBMITTED_DATE' ordinal='32' />
+              <column datatype='boolean' name='PRIORITY' ordinal='33' />
+              <column datatype='string' name='FEE_WAIVER_REQUEST' ordinal='34' />
+              <column datatype='string' name='FEE_WAIVER_EE_OR_SE_NUMBER' ordinal='35' />
+              <column datatype='string' name='EE_PRIORITY_STATUS' ordinal='36' />
+              <column datatype='string' name='EE_PRIORITY_NUMBER_FROM_ACCOUNT' ordinal='37' />
+              <column datatype='string' name='EE_PRIORITY_NUMBER_FROM_APPLICATION' ordinal='38' />
+              <column datatype='string' name='RMD_PRIORITY_STATUS' ordinal='39' />
+              <column datatype='string' name='RMD_PRIORITY_NUMBER_FROM_ACCOUNT' ordinal='40' />
+              <column datatype='string' name='RMD_PRIORITY_NUMBER_FROM_APPLICATION' ordinal='41' />
+              <column datatype='string' name='dbe' ordinal='42' />
+              <column datatype='string' name='cultivation_environment' ordinal='43' />
+              <column datatype='string' name='cultivation_tier' ordinal='44' />
+              <column datatype='datetime' name='cnb_dt_of_final_licensure' ordinal='45' />
+              <column datatype='datetime' name='APPLICATION_CREATED_DATE' ordinal='46' />
+              <column datatype='datetime' name='CNB_DEEMED_COMPLETE_DATE' ordinal='47' />
+              <column datatype='datetime' name='APPLICATION_APPROVED_DATE' ordinal='48' />
+              <column datatype='datetime' name='LIC_START_DATE' ordinal='49' />
+              <column datatype='datetime' name='LIC_EXPIRATION_DATE' ordinal='50' />
+              <column datatype='string' name='PMT_AMOUNT' ordinal='51' />
+              <column datatype='integer' name='LIC_FEE_AMOUNT' ordinal='52' />
+              <column datatype='integer' name='ZIP' ordinal='53' />
+              <column datatype='string' name='Town' ordinal='54' />
+              <column datatype='string' name='county' ordinal='55' />
+              <column datatype='real' name='county_lat' ordinal='56' />
+              <column datatype='real' name='county_long' ordinal='57' />
+              <column datatype='string' name='Region' ordinal='58' />
+              <column datatype='date' name='CCCUpdateDate' ordinal='59' />
+              <column datatype='string' name='ESTABLISHMENT_ADDRESS_2' ordinal='60' />
+              <column datatype='string' name='establishment_state' ordinal='61' />
+              <column datatype='real' name='latitude' ordinal='62' />
+              <column datatype='real' name='longitude' ordinal='63' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0sygxa30ipxqbn1ea0n941pcwzsu' name='oz_prices.csv' table='[oz_prices#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='date' name='SoldDate' ordinal='0' />
+              <column datatype='real' name='AverageRetailPriceperOz' ordinal='1' />
+              <column datatype='real' name='AverageRetailPriceperGm' ordinal='2' />
+              <column datatype='string' name='Unit' ordinal='3' />
+              <column datatype='date' name='CCCLastUpdated' ordinal='4' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0sygxa30ipxqbn1ea0n941pcwzsu' name='weekly_retail.csv' table='[weekly_retail#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='date' name='CCCLastUpdated' ordinal='0' />
+              <column datatype='integer' name='RecordNo' ordinal='1' />
+              <column datatype='date' name='SaleDate' ordinal='2' />
+              <column datatype='string' name='ProductCategoryName' ordinal='3' />
+              <column datatype='string' name='UnitOfMeasureName' ordinal='4' />
+              <column datatype='integer' name='CountBasedTotal' ordinal='5' />
+              <column datatype='real' name='DollarCountBasedTotal' ordinal='6' />
+              <column datatype='real' name='WeightBasedTotal' ordinal='7' />
+              <column datatype='real' name='DollarWeightBasedTotal' ordinal='8' />
+              <column datatype='real' name='Quantity' ordinal='9' />
+              <column datatype='real' name='TotalPrice' ordinal='10' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[APPLICATION_APPROVED_DATE]' value='[approved_pending_reopened_apps.csv].[APPLICATION_APPROVED_DATE]' />
+          <map key='[APPLICATION_CLASSIFICATION - Split 1]' value='[approved_pending_reopened_apps.csv].[APPLICATION_CLASSIFICATION - Split 1]' />
+          <map key='[APPLICATION_CLASSIFICATION - Split 2]' value='[approved_pending_reopened_apps.csv].[APPLICATION_CLASSIFICATION - Split 2]' />
+          <map key='[APPLICATION_CLASSIFICATION]' value='[approved_pending_reopened_apps.csv].[APPLICATION_CLASSIFICATION]' />
+          <map key='[APPLICATION_CREATED_DATE]' value='[approved_pending_reopened_apps.csv].[APPLICATION_CREATED_DATE]' />
+          <map key='[APPLICATION_NUMBER]' value='[approved_pending_reopened_apps.csv].[APPLICATION_NUMBER]' />
+          <map key='[APPROVED_LICENSE_TYPE]' value='[approved_pending_reopened_apps.csv].[APPROVED_LICENSE_TYPE]' />
+          <map key='[Approved_License_Stages]' value='[approved_pending_reopened_apps.csv].[Approved_License_Stages]' />
+          <map key='[AverageRetailPriceperGm]' value='[oz_prices.csv].[AverageRetailPriceperGm]' />
+          <map key='[AverageRetailPriceperOz]' value='[oz_prices.csv].[AverageRetailPriceperOz]' />
+          <map key='[BUSINESS_EMAIL]' value='[approved_pending_reopened_apps.csv].[BUSINESS_EMAIL]' />
+          <map key='[BUSINESS_PHONE]' value='[approved_pending_reopened_apps.csv].[BUSINESS_PHONE]' />
+          <map key='[CCCLastUpdated (oz_prices.csv)]' value='[oz_prices.csv].[CCCLastUpdated]' />
+          <map key='[CCCLastUpdated (weekly_retail.csv)]' value='[weekly_retail.csv].[CCCLastUpdated]' />
+          <map key='[CCCLastUpdated]' value='[approved_pending_reopened_apps.csv].[CCCLastUpdated]' />
+          <map key='[CCCUpdateDate]' value='[approved_pending_reopened_apps.csv].[CCCUpdateDate]' />
+          <map key='[CNB_DEEMED_COMPLETE_DATE]' value='[approved_pending_reopened_apps.csv].[CNB_DEEMED_COMPLETE_DATE]' />
+          <map key='[CountBasedTotal]' value='[weekly_retail.csv].[CountBasedTotal]' />
+          <map key='[DollarCountBasedTotal]' value='[weekly_retail.csv].[DollarCountBasedTotal]' />
+          <map key='[DollarWeightBasedTotal]' value='[weekly_retail.csv].[DollarWeightBasedTotal]' />
+          <map key='[EE_PRIORITY_NUMBER_FROM_ACCOUNT]' value='[approved_pending_reopened_apps.csv].[EE_PRIORITY_NUMBER_FROM_ACCOUNT]' />
+          <map key='[EE_PRIORITY_NUMBER_FROM_APPLICATION]' value='[approved_pending_reopened_apps.csv].[EE_PRIORITY_NUMBER_FROM_APPLICATION]' />
+          <map key='[EE_PRIORITY_STATUS]' value='[approved_pending_reopened_apps.csv].[EE_PRIORITY_STATUS]' />
+          <map key='[EIN_TIN]' value='[approved_pending_reopened_apps.csv].[EIN_TIN]' />
+          <map key='[ESTABLISHMENT_ADDRESS_2]' value='[approved_pending_reopened_apps.csv].[ESTABLISHMENT_ADDRESS_2]' />
+          <map key='[FEE_WAIVER_EE_OR_SE_NUMBER]' value='[approved_pending_reopened_apps.csv].[FEE_WAIVER_EE_OR_SE_NUMBER]' />
+          <map key='[FEE_WAIVER_REQUEST]' value='[approved_pending_reopened_apps.csv].[FEE_WAIVER_REQUEST]' />
+          <map key='[FIRST_COMPLIANCE_REVIEW_DATE]' value='[approved_pending_reopened_apps.csv].[FIRST_COMPLIANCE_REVIEW_DATE]' />
+          <map key='[LIC_EXPIRATION_DATE]' value='[approved_pending_reopened_apps.csv].[LIC_EXPIRATION_DATE]' />
+          <map key='[LIC_FEE_AMOUNT]' value='[approved_pending_reopened_apps.csv].[LIC_FEE_AMOUNT]' />
+          <map key='[LIC_FEE_PAYMENT_SUBMITTED_DATE]' value='[approved_pending_reopened_apps.csv].[LIC_FEE_PAYMENT_SUBMITTED_DATE]' />
+          <map key='[LIC_START_DATE]' value='[approved_pending_reopened_apps.csv].[LIC_START_DATE]' />
+          <map key='[PMT_AMOUNT]' value='[approved_pending_reopened_apps.csv].[PMT_AMOUNT]' />
+          <map key='[PRIORITY]' value='[approved_pending_reopened_apps.csv].[PRIORITY]' />
+          <map key='[ProductCategoryName]' value='[weekly_retail.csv].[ProductCategoryName]' />
+          <map key='[Quantity]' value='[weekly_retail.csv].[Quantity]' />
+          <map key='[RMD_PRIORITY_NUMBER_FROM_ACCOUNT]' value='[approved_pending_reopened_apps.csv].[RMD_PRIORITY_NUMBER_FROM_ACCOUNT]' />
+          <map key='[RMD_PRIORITY_NUMBER_FROM_APPLICATION]' value='[approved_pending_reopened_apps.csv].[RMD_PRIORITY_NUMBER_FROM_APPLICATION]' />
+          <map key='[RMD_PRIORITY_STATUS]' value='[approved_pending_reopened_apps.csv].[RMD_PRIORITY_STATUS]' />
+          <map key='[RecordNo]' value='[weekly_retail.csv].[RecordNo]' />
+          <map key='[Region]' value='[approved_pending_reopened_apps.csv].[Region]' />
+          <map key='[SUBMITTED_DATE]' value='[approved_pending_reopened_apps.csv].[SUBMITTED_DATE]' />
+          <map key='[SaleDate]' value='[weekly_retail.csv].[SaleDate]' />
+          <map key='[SoldDate]' value='[oz_prices.csv].[SoldDate]' />
+          <map key='[TotalPrice]' value='[weekly_retail.csv].[TotalPrice]' />
+          <map key='[Town]' value='[approved_pending_reopened_apps.csv].[Town]' />
+          <map key='[UnitOfMeasureName]' value='[weekly_retail.csv].[UnitOfMeasureName]' />
+          <map key='[Unit]' value='[oz_prices.csv].[Unit]' />
+          <map key='[WeightBasedTotal]' value='[weekly_retail.csv].[WeightBasedTotal]' />
+          <map key='[ZIP]' value='[approved_pending_reopened_apps.csv].[ZIP]' />
+          <map key='[application_status]' value='[approved_pending_reopened_apps.csv].[application_status]' />
+          <map key='[business_address_1]' value='[approved_pending_reopened_apps.csv].[business_address_1]' />
+          <map key='[business_address_2]' value='[approved_pending_reopened_apps.csv].[business_address_2]' />
+          <map key='[business_city]' value='[approved_pending_reopened_apps.csv].[business_city]' />
+          <map key='[business_name]' value='[approved_pending_reopened_apps.csv].[business_name]' />
+          <map key='[business_state]' value='[approved_pending_reopened_apps.csv].[business_state]' />
+          <map key='[business_zipcode]' value='[approved_pending_reopened_apps.csv].[business_zipcode]' />
+          <map key='[cnb_dt_of_final_licensure]' value='[approved_pending_reopened_apps.csv].[cnb_dt_of_final_licensure]' />
+          <map key='[commence_operations_date]' value='[approved_pending_reopened_apps.csv].[commence_operations_date]' />
+          <map key='[county]' value='[approved_pending_reopened_apps.csv].[county]' />
+          <map key='[county_lat]' value='[approved_pending_reopened_apps.csv].[county_lat]' />
+          <map key='[county_long]' value='[approved_pending_reopened_apps.csv].[county_long]' />
+          <map key='[cultivation_environment]' value='[approved_pending_reopened_apps.csv].[cultivation_environment]' />
+          <map key='[cultivation_tier]' value='[approved_pending_reopened_apps.csv].[cultivation_tier]' />
+          <map key='[dbe]' value='[approved_pending_reopened_apps.csv].[dbe]' />
+          <map key='[establishment_city]' value='[approved_pending_reopened_apps.csv].[establishment_city]' />
+          <map key='[establishment_state]' value='[approved_pending_reopened_apps.csv].[establishment_state]' />
+          <map key='[establishment_zipcode]' value='[approved_pending_reopened_apps.csv].[establishment_zipcode]' />
+          <map key='[geocoded_address]' value='[approved_pending_reopened_apps.csv].[geocoded_address]' />
+          <map key='[geocoded_county]' value='[approved_pending_reopened_apps.csv].[geocoded_county]' />
+          <map key='[latitude]' value='[approved_pending_reopened_apps.csv].[latitude]' />
+          <map key='[lic_status]' value='[approved_pending_reopened_apps.csv].[lic_status]' />
+          <map key='[license_number]' value='[approved_pending_reopened_apps.csv].[license_number]' />
+          <map key='[license_type]' value='[approved_pending_reopened_apps.csv].[license_type]' />
+          <map key='[longitude]' value='[approved_pending_reopened_apps.csv].[longitude]' />
+          <map key='[mailing_address_1]' value='[approved_pending_reopened_apps.csv].[mailing_address_1]' />
+          <map key='[mailing_address_2]' value='[approved_pending_reopened_apps.csv].[mailing_address_2]' />
+          <map key='[mailing_city]' value='[approved_pending_reopened_apps.csv].[mailing_city]' />
+          <map key='[mailing_state]' value='[approved_pending_reopened_apps.csv].[mailing_state]' />
+          <map key='[mailing_zipcode]' value='[approved_pending_reopened_apps.csv].[mailing_zipcode]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[oz_prices.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[weekly_retail.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CCCLastUpdated</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[CCCLastUpdated]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>CCCLastUpdated</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>application_status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[application_status]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>application_status</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>license_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[license_type]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>license_type</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>APPLICATION_CLASSIFICATION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[APPLICATION_CLASSIFICATION]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>APPLICATION_CLASSIFICATION</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>APPLICATION_CLASSIFICATION - Split 1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[APPLICATION_CLASSIFICATION - Split 1]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>APPLICATION_CLASSIFICATION - Split 1</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>APPLICATION_CLASSIFICATION - Split 2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[APPLICATION_CLASSIFICATION - Split 2]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>APPLICATION_CLASSIFICATION - Split 2</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>APPROVED_LICENSE_TYPE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[APPROVED_LICENSE_TYPE]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>APPROVED_LICENSE_TYPE</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Approved_License_Stages</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Approved_License_Stages]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>Approved_License_Stages</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>commence_operations_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[commence_operations_date]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>commence_operations_date</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lic_status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[lic_status]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>lic_status</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>license_number</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[license_number]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>license_number</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>business_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[business_name]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>business_name</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>establishment_city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[establishment_city]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>establishment_city</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>establishment_zipcode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[establishment_zipcode]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>establishment_zipcode</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BUSINESS_EMAIL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BUSINESS_EMAIL]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>BUSINESS_EMAIL</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BUSINESS_PHONE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BUSINESS_PHONE]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>BUSINESS_PHONE</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>business_address_1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[business_address_1]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>business_address_1</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>business_address_2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[business_address_2]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>business_address_2</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>business_city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[business_city]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>business_city</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>business_state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[business_state]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>business_state</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>business_zipcode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[business_zipcode]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>business_zipcode</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>geocoded_county</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[geocoded_county]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>geocoded_county</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>geocoded_address</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[geocoded_address]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>geocoded_address</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mailing_address_1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mailing_address_1]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>mailing_address_1</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mailing_address_2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mailing_address_2]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>mailing_address_2</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mailing_city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mailing_city]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>mailing_city</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mailing_state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mailing_state]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>mailing_state</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mailing_zipcode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[mailing_zipcode]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>mailing_zipcode</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EIN_TIN</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[EIN_TIN]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>EIN_TIN</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>APPLICATION_NUMBER</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[APPLICATION_NUMBER]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>APPLICATION_NUMBER</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SUBMITTED_DATE</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[SUBMITTED_DATE]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>SUBMITTED_DATE</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FIRST_COMPLIANCE_REVIEW_DATE</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[FIRST_COMPLIANCE_REVIEW_DATE]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>FIRST_COMPLIANCE_REVIEW_DATE</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LIC_FEE_PAYMENT_SUBMITTED_DATE</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[LIC_FEE_PAYMENT_SUBMITTED_DATE]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>LIC_FEE_PAYMENT_SUBMITTED_DATE</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PRIORITY</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[PRIORITY]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>PRIORITY</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FEE_WAIVER_REQUEST</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[FEE_WAIVER_REQUEST]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>FEE_WAIVER_REQUEST</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FEE_WAIVER_EE_OR_SE_NUMBER</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[FEE_WAIVER_EE_OR_SE_NUMBER]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>FEE_WAIVER_EE_OR_SE_NUMBER</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EE_PRIORITY_STATUS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[EE_PRIORITY_STATUS]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>EE_PRIORITY_STATUS</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EE_PRIORITY_NUMBER_FROM_ACCOUNT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[EE_PRIORITY_NUMBER_FROM_ACCOUNT]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>EE_PRIORITY_NUMBER_FROM_ACCOUNT</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EE_PRIORITY_NUMBER_FROM_APPLICATION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[EE_PRIORITY_NUMBER_FROM_APPLICATION]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>EE_PRIORITY_NUMBER_FROM_APPLICATION</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RMD_PRIORITY_STATUS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[RMD_PRIORITY_STATUS]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>RMD_PRIORITY_STATUS</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RMD_PRIORITY_NUMBER_FROM_ACCOUNT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[RMD_PRIORITY_NUMBER_FROM_ACCOUNT]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>RMD_PRIORITY_NUMBER_FROM_ACCOUNT</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RMD_PRIORITY_NUMBER_FROM_APPLICATION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[RMD_PRIORITY_NUMBER_FROM_APPLICATION]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>RMD_PRIORITY_NUMBER_FROM_APPLICATION</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dbe</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dbe]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>dbe</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cultivation_environment</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cultivation_environment]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>cultivation_environment</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cultivation_tier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cultivation_tier]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>cultivation_tier</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cnb_dt_of_final_licensure</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[cnb_dt_of_final_licensure]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>cnb_dt_of_final_licensure</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>APPLICATION_CREATED_DATE</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[APPLICATION_CREATED_DATE]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>APPLICATION_CREATED_DATE</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CNB_DEEMED_COMPLETE_DATE</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[CNB_DEEMED_COMPLETE_DATE]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>CNB_DEEMED_COMPLETE_DATE</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>APPLICATION_APPROVED_DATE</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[APPLICATION_APPROVED_DATE]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>APPLICATION_APPROVED_DATE</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LIC_START_DATE</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[LIC_START_DATE]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>LIC_START_DATE</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LIC_EXPIRATION_DATE</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[LIC_EXPIRATION_DATE]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>LIC_EXPIRATION_DATE</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PMT_AMOUNT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PMT_AMOUNT]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>PMT_AMOUNT</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LIC_FEE_AMOUNT</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[LIC_FEE_AMOUNT]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>LIC_FEE_AMOUNT</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ZIP</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ZIP]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>ZIP</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Town</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Town]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>Town</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>county</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[county]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>county</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>county_lat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[county_lat]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>county_lat</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>county_long</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[county_long]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>county_long</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CCCUpdateDate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[CCCUpdateDate]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>CCCUpdateDate</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ESTABLISHMENT_ADDRESS_2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ESTABLISHMENT_ADDRESS_2]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>ESTABLISHMENT_ADDRESS_2</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>establishment_state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[establishment_state]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>establishment_state</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[latitude]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>latitude</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[longitude]</local-name>
+            <parent-name>[approved_pending_reopened_apps.csv]</parent-name>
+            <remote-alias>longitude</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SoldDate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[SoldDate]</local-name>
+            <parent-name>[oz_prices.csv]</parent-name>
+            <remote-alias>SoldDate</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[oz_prices.csv_D053109625724DBCB6C13A1139B0FBA0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AverageRetailPriceperOz</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AverageRetailPriceperOz]</local-name>
+            <parent-name>[oz_prices.csv]</parent-name>
+            <remote-alias>AverageRetailPriceperOz</remote-alias>
+            <ordinal>65</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[oz_prices.csv_D053109625724DBCB6C13A1139B0FBA0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AverageRetailPriceperGm</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AverageRetailPriceperGm]</local-name>
+            <parent-name>[oz_prices.csv]</parent-name>
+            <remote-alias>AverageRetailPriceperGm</remote-alias>
+            <ordinal>66</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[oz_prices.csv_D053109625724DBCB6C13A1139B0FBA0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Unit]</local-name>
+            <parent-name>[oz_prices.csv]</parent-name>
+            <remote-alias>Unit</remote-alias>
+            <ordinal>67</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[oz_prices.csv_D053109625724DBCB6C13A1139B0FBA0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CCCLastUpdated</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[CCCLastUpdated (oz_prices.csv)]</local-name>
+            <parent-name>[oz_prices.csv]</parent-name>
+            <remote-alias>CCCLastUpdated</remote-alias>
+            <ordinal>68</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[oz_prices.csv_D053109625724DBCB6C13A1139B0FBA0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CCCLastUpdated</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[CCCLastUpdated (weekly_retail.csv)]</local-name>
+            <parent-name>[weekly_retail.csv]</parent-name>
+            <remote-alias>CCCLastUpdated</remote-alias>
+            <ordinal>69</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[weekly_retail.csv_210F3015DD0F4FDCADC3F1FE3B49C2F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RecordNo</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[RecordNo]</local-name>
+            <parent-name>[weekly_retail.csv]</parent-name>
+            <remote-alias>RecordNo</remote-alias>
+            <ordinal>70</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[weekly_retail.csv_210F3015DD0F4FDCADC3F1FE3B49C2F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SaleDate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[SaleDate]</local-name>
+            <parent-name>[weekly_retail.csv]</parent-name>
+            <remote-alias>SaleDate</remote-alias>
+            <ordinal>71</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[weekly_retail.csv_210F3015DD0F4FDCADC3F1FE3B49C2F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ProductCategoryName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ProductCategoryName]</local-name>
+            <parent-name>[weekly_retail.csv]</parent-name>
+            <remote-alias>ProductCategoryName</remote-alias>
+            <ordinal>72</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[weekly_retail.csv_210F3015DD0F4FDCADC3F1FE3B49C2F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>UnitOfMeasureName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[UnitOfMeasureName]</local-name>
+            <parent-name>[weekly_retail.csv]</parent-name>
+            <remote-alias>UnitOfMeasureName</remote-alias>
+            <ordinal>73</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[weekly_retail.csv_210F3015DD0F4FDCADC3F1FE3B49C2F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CountBasedTotal</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CountBasedTotal]</local-name>
+            <parent-name>[weekly_retail.csv]</parent-name>
+            <remote-alias>CountBasedTotal</remote-alias>
+            <ordinal>74</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[weekly_retail.csv_210F3015DD0F4FDCADC3F1FE3B49C2F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DollarCountBasedTotal</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[DollarCountBasedTotal]</local-name>
+            <parent-name>[weekly_retail.csv]</parent-name>
+            <remote-alias>DollarCountBasedTotal</remote-alias>
+            <ordinal>75</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[weekly_retail.csv_210F3015DD0F4FDCADC3F1FE3B49C2F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WeightBasedTotal</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[WeightBasedTotal]</local-name>
+            <parent-name>[weekly_retail.csv]</parent-name>
+            <remote-alias>WeightBasedTotal</remote-alias>
+            <ordinal>76</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[weekly_retail.csv_210F3015DD0F4FDCADC3F1FE3B49C2F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DollarWeightBasedTotal</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[DollarWeightBasedTotal]</local-name>
+            <parent-name>[weekly_retail.csv]</parent-name>
+            <remote-alias>DollarWeightBasedTotal</remote-alias>
+            <ordinal>77</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[weekly_retail.csv_210F3015DD0F4FDCADC3F1FE3B49C2F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Quantity]</local-name>
+            <parent-name>[weekly_retail.csv]</parent-name>
+            <remote-alias>Quantity</remote-alias>
+            <ordinal>78</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[weekly_retail.csv_210F3015DD0F4FDCADC3F1FE3B49C2F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalPrice</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[TotalPrice]</local-name>
+            <parent-name>[weekly_retail.csv]</parent-name>
+            <remote-alias>TotalPrice</remote-alias>
+            <ordinal>79</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[weekly_retail.csv_210F3015DD0F4FDCADC3F1FE3B49C2F1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Application Approved Date' datatype='datetime' name='[APPLICATION_APPROVED_DATE]' role='dimension' type='ordinal' />
+      <column caption='APPLICATION CLASSIFICATION - Split 1' datatype='string' name='[APPLICATION_CLASSIFICATION - Split 1]' role='dimension' type='nominal' />
+      <column caption='APPLICATION CLASSIFICATION - Split 2' datatype='string' name='[APPLICATION_CLASSIFICATION - Split 2]' role='dimension' type='nominal' />
+      <column caption='Application Classification' datatype='string' name='[APPLICATION_CLASSIFICATION]' role='dimension' type='nominal' />
+      <column caption='Application Created Date' datatype='datetime' name='[APPLICATION_CREATED_DATE]' role='dimension' type='ordinal' />
+      <column caption='Application Number' datatype='string' name='[APPLICATION_NUMBER]' role='dimension' type='nominal' />
+      <column caption='Approved License Type' datatype='string' name='[APPROVED_LICENSE_TYPE]' role='dimension' type='nominal' />
+      <column caption='Approved License Stages' datatype='string' name='[Approved_License_Stages]' role='dimension' type='nominal' />
+      <column caption='Average Retail Priceper Gm' datatype='real' name='[AverageRetailPriceperGm]' role='measure' type='quantitative' />
+      <column caption='Average Retail Priceper Oz' datatype='real' name='[AverageRetailPriceperOz]' role='measure' type='quantitative' />
+      <column caption='Business Email' datatype='string' name='[BUSINESS_EMAIL]' role='dimension' type='nominal' />
+      <column caption='Business Phone' datatype='string' name='[BUSINESS_PHONE]' role='dimension' type='nominal' />
+      <column caption='CCCLastUpdated (oz prices.csv)' datatype='date' name='[CCCLastUpdated (oz_prices.csv)]' role='dimension' type='ordinal' />
+      <column caption='CCCLastUpdated (weekly retail.csv)' datatype='date' name='[CCCLastUpdated (weekly_retail.csv)]' role='dimension' type='ordinal' />
+      <column caption='CCC Last Updated' datatype='date' name='[CCCLastUpdated]' role='dimension' type='ordinal' />
+      <column caption='CCC Update Date' datatype='date' name='[CCCUpdateDate]' role='dimension' type='ordinal' />
+      <column caption='Cnb Deemed Complete Date' datatype='datetime' name='[CNB_DEEMED_COMPLETE_DATE]' role='dimension' type='ordinal' />
+      <column caption='Price per quantity' datatype='real' name='[Calculation_2796172446125121537]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[TotalPrice]/[Quantity]' />
+      </column>
+      <column caption='Count Based Total' datatype='integer' name='[CountBasedTotal]' role='measure' type='quantitative' />
+      <column caption='Dollar Count Based Total' datatype='real' name='[DollarCountBasedTotal]' role='measure' type='quantitative' />
+      <column caption='Dollar Weight Based Total' datatype='real' name='[DollarWeightBasedTotal]' role='measure' type='quantitative' />
+      <column caption='Ee Priority Number From Account' datatype='string' name='[EE_PRIORITY_NUMBER_FROM_ACCOUNT]' role='dimension' type='nominal' />
+      <column caption='Ee Priority Number From Application' datatype='string' name='[EE_PRIORITY_NUMBER_FROM_APPLICATION]' role='dimension' type='nominal' />
+      <column caption='Ee Priority Status' datatype='string' name='[EE_PRIORITY_STATUS]' role='dimension' type='nominal' />
+      <column caption='Ein Tin' datatype='string' name='[EIN_TIN]' role='dimension' type='nominal' />
+      <column caption='Establishment Address 2' datatype='string' name='[ESTABLISHMENT_ADDRESS_2]' role='dimension' type='nominal' />
+      <column caption='Fee Waiver Ee Or Se Number' datatype='string' name='[FEE_WAIVER_EE_OR_SE_NUMBER]' role='dimension' type='nominal' />
+      <column caption='Fee Waiver Request' datatype='string' name='[FEE_WAIVER_REQUEST]' role='dimension' type='nominal' />
+      <column caption='First Compliance Review Date' datatype='datetime' name='[FIRST_COMPLIANCE_REVIEW_DATE]' role='dimension' type='ordinal' />
+      <column caption='Lic Expiration Date' datatype='datetime' name='[LIC_EXPIRATION_DATE]' role='dimension' type='ordinal' />
+      <column caption='Lic Fee Amount' datatype='integer' name='[LIC_FEE_AMOUNT]' role='measure' type='quantitative' />
+      <column caption='Lic Fee Payment Submitted Date' datatype='datetime' name='[LIC_FEE_PAYMENT_SUBMITTED_DATE]' role='dimension' type='ordinal' />
+      <column caption='Lic Start Date' datatype='datetime' name='[LIC_START_DATE]' role='dimension' type='ordinal' />
+      <column caption='Pmt Amount' datatype='string' name='[PMT_AMOUNT]' role='dimension' type='nominal' />
+      <column caption='Priority' datatype='boolean' name='[PRIORITY]' role='dimension' type='nominal' />
+      <column caption='Product Category Name' datatype='string' name='[ProductCategoryName]' role='dimension' type='nominal' />
+      <column caption='Rmd Priority Number From Account' datatype='string' name='[RMD_PRIORITY_NUMBER_FROM_ACCOUNT]' role='dimension' type='nominal' />
+      <column caption='Rmd Priority Number From Application' datatype='string' name='[RMD_PRIORITY_NUMBER_FROM_APPLICATION]' role='dimension' type='nominal' />
+      <column caption='Rmd Priority Status' datatype='string' name='[RMD_PRIORITY_STATUS]' role='dimension' type='nominal' />
+      <column caption='Record No' datatype='integer' name='[RecordNo]' role='measure' type='quantitative' />
+      <column caption='Submitted Date' datatype='datetime' name='[SUBMITTED_DATE]' role='dimension' type='ordinal' />
+      <column caption='Sale Date' datatype='date' name='[SaleDate]' role='dimension' type='ordinal' />
+      <column caption='Sold Date' datatype='date' name='[SoldDate]' role='dimension' type='ordinal' />
+      <column caption='Total Price' datatype='real' name='[TotalPrice]' role='measure' type='quantitative' />
+      <column caption='Unit Of Measure Name' datatype='string' name='[UnitOfMeasureName]' role='dimension' type='nominal' />
+      <column caption='Weight Based Total' datatype='real' name='[WeightBasedTotal]' role='measure' type='quantitative' />
+      <column aggregation='Sum' datatype='integer' default-format='*00000' name='[ZIP]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <_.fcp.ObjectModelTableType.true...column caption='approved_pending_reopened_apps.csv' datatype='table' name='[__tableau_internal_object_id__].[approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='oz_prices.csv' datatype='table' name='[__tableau_internal_object_id__].[oz_prices.csv_D053109625724DBCB6C13A1139B0FBA0]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='weekly_retail.csv' datatype='table' name='[__tableau_internal_object_id__].[weekly_retail.csv_210F3015DD0F4FDCADC3F1FE3B49C2F1]' role='measure' type='quantitative' />
+      <column caption='Application Status' datatype='string' name='[application_status]' role='dimension' type='nominal' />
+      <column caption='Business Address 1' datatype='string' name='[business_address_1]' role='dimension' type='nominal' />
+      <column caption='Business Address 2' datatype='string' name='[business_address_2]' role='dimension' type='nominal' />
+      <column caption='Business City' datatype='string' name='[business_city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Business Name' datatype='string' name='[business_name]' role='dimension' type='nominal' />
+      <column caption='Business State' datatype='string' name='[business_state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column aggregation='Sum' caption='Business Zipcode' datatype='integer' default-format='*00000' name='[business_zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column caption='Cnb Dt Of Final Licensure' datatype='datetime' name='[cnb_dt_of_final_licensure]' role='dimension' type='ordinal' />
+      <column caption='Commence Operations Date' datatype='date' name='[commence_operations_date]' role='dimension' type='ordinal' />
+      <column caption='County' datatype='string' name='[county]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column aggregation='Avg' caption='County Lat' datatype='real' name='[county_lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column caption='County Long' datatype='real' name='[county_long]' role='measure' type='quantitative' />
+      <column caption='Cultivation Environment' datatype='string' name='[cultivation_environment]' role='dimension' type='nominal' />
+      <column caption='Cultivation Tier' datatype='string' name='[cultivation_tier]' role='dimension' type='nominal' />
+      <column caption='Dbe' datatype='string' name='[dbe]' role='dimension' type='nominal' />
+      <column caption='Establishment City' datatype='string' name='[establishment_city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Establishment State' datatype='string' name='[establishment_state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Establishment Zipcode' datatype='string' name='[establishment_zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <column caption='Geocoded Address' datatype='string' name='[geocoded_address]' role='dimension' type='nominal' />
+      <column caption='Geocoded County' datatype='string' name='[geocoded_county]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column caption='Lic Status' datatype='string' name='[lic_status]' role='dimension' type='nominal' />
+      <column caption='License Number' datatype='string' name='[license_number]' role='dimension' type='nominal' />
+      <column caption='License Type' datatype='string' name='[license_type]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Mailing Address 1' datatype='string' name='[mailing_address_1]' role='dimension' type='nominal' />
+      <column caption='Mailing Address 2' datatype='string' name='[mailing_address_2]' role='dimension' type='nominal' />
+      <column caption='Mailing City' datatype='string' name='[mailing_city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Mailing State' datatype='string' name='[mailing_state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column aggregation='Sum' caption='Mailing Zipcode' datatype='integer' default-format='*00000' name='[mailing_zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column-instance column='[ProductCategoryName]' derivation='None' name='[none:ProductCategoryName:nk]' pivot='key' type='nominal' />
+      <column-instance column='[UnitOfMeasureName]' derivation='None' name='[none:UnitOfMeasureName:nk]' pivot='key' type='nominal' />
+      <column-instance column='[application_status]' derivation='None' name='[none:application_status:nk]' pivot='key' type='nominal' />
+      <column-instance column='[APPLICATION_APPROVED_DATE]' derivation='Year' name='[yr:APPLICATION_APPROVED_DATE:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[SaleDate]' derivation='Year' name='[yr:SaleDate:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (YEAR(Application Approved Date),Unit Of Measure Name)' hidden='true' name='[Action (YEAR(Application Approved Date),Unit Of Measure Name)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[yr:APPLICATION_APPROVED_DATE:ok]' />
+          <groupfilter function='level-members' level='[UnitOfMeasureName]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (YEAR(Sale Date),Unit Of Measure Name)' hidden='true' name='[Action (YEAR(Sale Date),Unit Of Measure Name)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[yr:SaleDate:ok]' />
+          <groupfilter function='level-members' level='[UnitOfMeasureName]' />
+        </groupfilter>
+      </group>
+      <group hidden='true' name='[Exclusions (Unit Of Measure Name,YEAR(Application Approved Date))]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:UnitOfMeasureName:nk]' />
+          <groupfilter function='level-members' level='[yr:APPLICATION_APPROVED_DATE:ok]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:application_status:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;APPROVED&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;REOPENED&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;PENDING&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:ProductCategoryName:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Fresh Frozen Flower&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Buds&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Infused Pre-Rolls&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Concentrate (Each)&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Concentrate&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Raw Pre-Rolls&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Kief&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Waste&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Concentrate (Bulk)&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Shake/Trim (by strain)&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Shake/Trim&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='CCCLastUpdated' />
+        <field-sort-custom-order field='application_status' />
+        <field-sort-custom-order field='license_type' />
+        <field-sort-custom-order field='APPLICATION_CLASSIFICATION' />
+        <field-sort-custom-order field='APPLICATION_CLASSIFICATION - Split 1' />
+        <field-sort-custom-order field='APPLICATION_CLASSIFICATION - Split 2' />
+        <field-sort-custom-order field='APPROVED_LICENSE_TYPE' />
+        <field-sort-custom-order field='Approved_License_Stages' />
+        <field-sort-custom-order field='commence_operations_date' />
+        <field-sort-custom-order field='lic_status' />
+        <field-sort-custom-order field='license_number' />
+        <field-sort-custom-order field='business_name' />
+        <field-sort-custom-order field='establishment_city' />
+        <field-sort-custom-order field='establishment_zipcode' />
+        <field-sort-custom-order field='BUSINESS_EMAIL' />
+        <field-sort-custom-order field='BUSINESS_PHONE' />
+        <field-sort-custom-order field='business_address_1' />
+        <field-sort-custom-order field='business_address_2' />
+        <field-sort-custom-order field='business_city' />
+        <field-sort-custom-order field='business_state' />
+        <field-sort-custom-order field='business_zipcode' />
+        <field-sort-custom-order field='geocoded_county' />
+        <field-sort-custom-order field='geocoded_address' />
+        <field-sort-custom-order field='mailing_address_1' />
+        <field-sort-custom-order field='mailing_address_2' />
+        <field-sort-custom-order field='mailing_city' />
+        <field-sort-custom-order field='mailing_state' />
+        <field-sort-custom-order field='mailing_zipcode' />
+        <field-sort-custom-order field='EIN_TIN' />
+        <field-sort-custom-order field='APPLICATION_NUMBER' />
+        <field-sort-custom-order field='SUBMITTED_DATE' />
+        <field-sort-custom-order field='FIRST_COMPLIANCE_REVIEW_DATE' />
+        <field-sort-custom-order field='LIC_FEE_PAYMENT_SUBMITTED_DATE' />
+        <field-sort-custom-order field='PRIORITY' />
+        <field-sort-custom-order field='FEE_WAIVER_REQUEST' />
+        <field-sort-custom-order field='FEE_WAIVER_EE_OR_SE_NUMBER' />
+        <field-sort-custom-order field='EE_PRIORITY_STATUS' />
+        <field-sort-custom-order field='EE_PRIORITY_NUMBER_FROM_ACCOUNT' />
+        <field-sort-custom-order field='EE_PRIORITY_NUMBER_FROM_APPLICATION' />
+        <field-sort-custom-order field='RMD_PRIORITY_STATUS' />
+        <field-sort-custom-order field='RMD_PRIORITY_NUMBER_FROM_ACCOUNT' />
+        <field-sort-custom-order field='RMD_PRIORITY_NUMBER_FROM_APPLICATION' />
+        <field-sort-custom-order field='dbe' />
+        <field-sort-custom-order field='cultivation_environment' />
+        <field-sort-custom-order field='cultivation_tier' />
+        <field-sort-custom-order field='cnb_dt_of_final_licensure' />
+        <field-sort-custom-order field='APPLICATION_CREATED_DATE' />
+        <field-sort-custom-order field='CNB_DEEMED_COMPLETE_DATE' />
+        <field-sort-custom-order field='APPLICATION_APPROVED_DATE' />
+        <field-sort-custom-order field='LIC_START_DATE' />
+        <field-sort-custom-order field='LIC_EXPIRATION_DATE' />
+        <field-sort-custom-order field='PMT_AMOUNT' />
+        <field-sort-custom-order field='LIC_FEE_AMOUNT' />
+        <field-sort-custom-order field='ZIP' />
+        <field-sort-custom-order field='Town' />
+        <field-sort-custom-order field='county' />
+        <field-sort-custom-order field='county_lat' />
+        <field-sort-custom-order field='county_long' />
+        <field-sort-custom-order field='Region' />
+        <field-sort-custom-order field='CCCUpdateDate' />
+        <field-sort-custom-order field='ESTABLISHMENT_ADDRESS_2' />
+        <field-sort-custom-order field='establishment_state' />
+        <field-sort-custom-order field='latitude' />
+        <field-sort-custom-order field='longitude' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='approved_pending_reopened_apps.csv' id='approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB'>
+            <properties context=''>
+              <relation connection='textscan.0sygxa30ipxqbn1ea0n941pcwzsu' name='approved_pending_reopened_apps.csv' table='[approved_pending_reopened_apps#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='CCCLastUpdated' ordinal='0' />
+                  <column datatype='string' name='application_status' ordinal='1' />
+                  <column datatype='string' name='license_type' ordinal='2' />
+                  <column datatype='string' name='APPLICATION_CLASSIFICATION' ordinal='3' />
+                  <column datatype='string' name='APPLICATION_CLASSIFICATION - Split 1' ordinal='4' />
+                  <column datatype='string' name='APPLICATION_CLASSIFICATION - Split 2' ordinal='5' />
+                  <column datatype='string' name='APPROVED_LICENSE_TYPE' ordinal='6' />
+                  <column datatype='string' name='Approved_License_Stages' ordinal='7' />
+                  <column datatype='date' name='commence_operations_date' ordinal='8' />
+                  <column datatype='string' name='lic_status' ordinal='9' />
+                  <column datatype='string' name='license_number' ordinal='10' />
+                  <column datatype='string' name='business_name' ordinal='11' />
+                  <column datatype='string' name='establishment_city' ordinal='12' />
+                  <column datatype='string' name='establishment_zipcode' ordinal='13' />
+                  <column datatype='string' name='BUSINESS_EMAIL' ordinal='14' />
+                  <column datatype='string' name='BUSINESS_PHONE' ordinal='15' />
+                  <column datatype='string' name='business_address_1' ordinal='16' />
+                  <column datatype='string' name='business_address_2' ordinal='17' />
+                  <column datatype='string' name='business_city' ordinal='18' />
+                  <column datatype='string' name='business_state' ordinal='19' />
+                  <column datatype='integer' name='business_zipcode' ordinal='20' />
+                  <column datatype='string' name='geocoded_county' ordinal='21' />
+                  <column datatype='string' name='geocoded_address' ordinal='22' />
+                  <column datatype='string' name='mailing_address_1' ordinal='23' />
+                  <column datatype='string' name='mailing_address_2' ordinal='24' />
+                  <column datatype='string' name='mailing_city' ordinal='25' />
+                  <column datatype='string' name='mailing_state' ordinal='26' />
+                  <column datatype='integer' name='mailing_zipcode' ordinal='27' />
+                  <column datatype='string' name='EIN_TIN' ordinal='28' />
+                  <column datatype='string' name='APPLICATION_NUMBER' ordinal='29' />
+                  <column datatype='datetime' name='SUBMITTED_DATE' ordinal='30' />
+                  <column datatype='datetime' name='FIRST_COMPLIANCE_REVIEW_DATE' ordinal='31' />
+                  <column datatype='datetime' name='LIC_FEE_PAYMENT_SUBMITTED_DATE' ordinal='32' />
+                  <column datatype='boolean' name='PRIORITY' ordinal='33' />
+                  <column datatype='string' name='FEE_WAIVER_REQUEST' ordinal='34' />
+                  <column datatype='string' name='FEE_WAIVER_EE_OR_SE_NUMBER' ordinal='35' />
+                  <column datatype='string' name='EE_PRIORITY_STATUS' ordinal='36' />
+                  <column datatype='string' name='EE_PRIORITY_NUMBER_FROM_ACCOUNT' ordinal='37' />
+                  <column datatype='string' name='EE_PRIORITY_NUMBER_FROM_APPLICATION' ordinal='38' />
+                  <column datatype='string' name='RMD_PRIORITY_STATUS' ordinal='39' />
+                  <column datatype='string' name='RMD_PRIORITY_NUMBER_FROM_ACCOUNT' ordinal='40' />
+                  <column datatype='string' name='RMD_PRIORITY_NUMBER_FROM_APPLICATION' ordinal='41' />
+                  <column datatype='string' name='dbe' ordinal='42' />
+                  <column datatype='string' name='cultivation_environment' ordinal='43' />
+                  <column datatype='string' name='cultivation_tier' ordinal='44' />
+                  <column datatype='datetime' name='cnb_dt_of_final_licensure' ordinal='45' />
+                  <column datatype='datetime' name='APPLICATION_CREATED_DATE' ordinal='46' />
+                  <column datatype='datetime' name='CNB_DEEMED_COMPLETE_DATE' ordinal='47' />
+                  <column datatype='datetime' name='APPLICATION_APPROVED_DATE' ordinal='48' />
+                  <column datatype='datetime' name='LIC_START_DATE' ordinal='49' />
+                  <column datatype='datetime' name='LIC_EXPIRATION_DATE' ordinal='50' />
+                  <column datatype='string' name='PMT_AMOUNT' ordinal='51' />
+                  <column datatype='integer' name='LIC_FEE_AMOUNT' ordinal='52' />
+                  <column datatype='integer' name='ZIP' ordinal='53' />
+                  <column datatype='string' name='Town' ordinal='54' />
+                  <column datatype='string' name='county' ordinal='55' />
+                  <column datatype='real' name='county_lat' ordinal='56' />
+                  <column datatype='real' name='county_long' ordinal='57' />
+                  <column datatype='string' name='Region' ordinal='58' />
+                  <column datatype='date' name='CCCUpdateDate' ordinal='59' />
+                  <column datatype='string' name='ESTABLISHMENT_ADDRESS_2' ordinal='60' />
+                  <column datatype='string' name='establishment_state' ordinal='61' />
+                  <column datatype='real' name='latitude' ordinal='62' />
+                  <column datatype='real' name='longitude' ordinal='63' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='oz_prices.csv' id='oz_prices.csv_D053109625724DBCB6C13A1139B0FBA0'>
+            <properties context=''>
+              <relation connection='textscan.0sygxa30ipxqbn1ea0n941pcwzsu' name='oz_prices.csv' table='[oz_prices#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='SoldDate' ordinal='0' />
+                  <column datatype='real' name='AverageRetailPriceperOz' ordinal='1' />
+                  <column datatype='real' name='AverageRetailPriceperGm' ordinal='2' />
+                  <column datatype='string' name='Unit' ordinal='3' />
+                  <column datatype='date' name='CCCLastUpdated' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='weekly_retail.csv' id='weekly_retail.csv_210F3015DD0F4FDCADC3F1FE3B49C2F1'>
+            <properties context=''>
+              <relation connection='textscan.0sygxa30ipxqbn1ea0n941pcwzsu' name='weekly_retail.csv' table='[weekly_retail#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='CCCLastUpdated' ordinal='0' />
+                  <column datatype='integer' name='RecordNo' ordinal='1' />
+                  <column datatype='date' name='SaleDate' ordinal='2' />
+                  <column datatype='string' name='ProductCategoryName' ordinal='3' />
+                  <column datatype='string' name='UnitOfMeasureName' ordinal='4' />
+                  <column datatype='integer' name='CountBasedTotal' ordinal='5' />
+                  <column datatype='real' name='DollarCountBasedTotal' ordinal='6' />
+                  <column datatype='real' name='WeightBasedTotal' ordinal='7' />
+                  <column datatype='real' name='DollarWeightBasedTotal' ordinal='8' />
+                  <column datatype='real' name='Quantity' ordinal='9' />
+                  <column datatype='real' name='TotalPrice' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression _.fcp.RelationshipCalculations.false...op='[YEAR(APPLICATION_CREATED_DATE)]' _.fcp.RelationshipCalculations.true...op='YEAR([APPLICATION_CREATED_DATE])' />
+              <expression _.fcp.RelationshipCalculations.false...op='[YEAR(SoldDate)]' _.fcp.RelationshipCalculations.true...op='YEAR([SoldDate])' />
+            </expression>
+            <first-end-point object-id='approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB' />
+            <second-end-point object-id='oz_prices.csv_D053109625724DBCB6C13A1139B0FBA0' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression _.fcp.RelationshipCalculations.false...op='[YEAR(APPLICATION_CREATED_DATE)&#10;]' _.fcp.RelationshipCalculations.true...op='YEAR([APPLICATION_CREATED_DATE])&#10;' />
+              <expression _.fcp.RelationshipCalculations.false...op='[YEAR(SaleDate)&#10;]' _.fcp.RelationshipCalculations.true...op='YEAR([SaleDate])&#10;' />
+            </expression>
+            <first-end-point object-id='approved_pending_reopened_apps.csv_E27619ABC6604BEE8C53DB0E238EA2AB' />
+            <second-end-point object-id='weekly_retail.csv_210F3015DD0F4FDCADC3F1FE3B49C2F1' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <shared-views>
+    <shared-view name='federated.0kchunr0ucreps1faesn51swnx01'>
+      <datasources>
+        <datasource caption='Cannabis DB' name='federated.0kchunr0ucreps1faesn51swnx01' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0kchunr0ucreps1faesn51swnx01'>
+        <column caption='Product Category Name' datatype='string' name='[ProductCategoryName]' role='dimension' type='nominal' />
+        <column caption='Unit Of Measure Name' datatype='string' name='[UnitOfMeasureName]' role='dimension' type='nominal' />
+        <column-instance column='[ProductCategoryName]' derivation='None' name='[none:ProductCategoryName:nk]' pivot='key' type='nominal' />
+        <column-instance column='[UnitOfMeasureName]' derivation='None' name='[none:UnitOfMeasureName:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[none:ProductCategoryName:nk]'>
+        <groupfilter function='level-members' level='[none:ProductCategoryName:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+      <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[none:UnitOfMeasureName:nk]'>
+        <groupfilter function='member' level='[none:UnitOfMeasureName:nk]' member='&quot;Grams&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_6C24F91EBA6F4A28839E743B0EBCFF50]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Tenax Dashboard' type='sheet' worksheet='Growth Over Time' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Tenax Dashboard' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Approved Distributions'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Distribution of Approved, Pending, and Reopened Applications</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Cannabis DB' name='federated.0kchunr0ucreps1faesn51swnx01' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0kchunr0ucreps1faesn51swnx01'>
+            <column caption='Application Approved Date' datatype='datetime' name='[APPLICATION_APPROVED_DATE]' role='dimension' type='ordinal' />
+            <column caption='Application Created Date' datatype='datetime' name='[APPLICATION_CREATED_DATE]' role='dimension' type='ordinal' />
+            <column caption='Application Number' datatype='string' name='[APPLICATION_NUMBER]' role='dimension' type='nominal' />
+            <column caption='Business Email' datatype='string' name='[BUSINESS_EMAIL]' role='dimension' type='nominal' />
+            <column caption='Business Phone' datatype='string' name='[BUSINESS_PHONE]' role='dimension' type='nominal' />
+            <column caption='Product Category Name' datatype='string' name='[ProductCategoryName]' role='dimension' type='nominal' />
+            <column caption='Sale Date' datatype='date' name='[SaleDate]' role='dimension' type='ordinal' />
+            <column caption='Unit Of Measure Name' datatype='string' name='[UnitOfMeasureName]' role='dimension' type='nominal' />
+            <column caption='Application Status' datatype='string' name='[application_status]' role='dimension' type='nominal' />
+            <column-instance column='[latitude]' derivation='Avg' name='[avg:latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[longitude]' derivation='Avg' name='[avg:longitude:qk]' pivot='key' type='quantitative' />
+            <column caption='Business Name' datatype='string' name='[business_name]' role='dimension' type='nominal' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column-instance column='[APPLICATION_NUMBER]' derivation='None' name='[none:APPLICATION_NUMBER:nk]' pivot='key' type='nominal' />
+            <column-instance column='[BUSINESS_EMAIL]' derivation='None' name='[none:BUSINESS_EMAIL:nk]' pivot='key' type='nominal' />
+            <column-instance column='[BUSINESS_PHONE]' derivation='None' name='[none:BUSINESS_PHONE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ProductCategoryName]' derivation='None' name='[none:ProductCategoryName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[UnitOfMeasureName]' derivation='None' name='[none:UnitOfMeasureName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[application_status]' derivation='None' name='[none:application_status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[business_name]' derivation='None' name='[none:business_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[APPLICATION_APPROVED_DATE]' derivation='Year' name='[yr:APPLICATION_APPROVED_DATE:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[APPLICATION_CREATED_DATE]' derivation='Year' name='[yr:APPLICATION_CREATED_DATE:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[SaleDate]' derivation='Year' name='[yr:SaleDate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[Action (YEAR(Application Approved Date),Unit Of Measure Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6C24F91EBA6F4A28839E743B0EBCFF50]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:APPLICATION_APPROVED_DATE:ok]' />
+              <groupfilter function='level-members' level='[UnitOfMeasureName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[Action (YEAR(Sale Date),Unit Of Measure Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6C24F91EBA6F4A28839E743B0EBCFF50]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:SaleDate:ok]' />
+              <groupfilter function='level-members' level='[UnitOfMeasureName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[Exclusions (Unit Of Measure Name,YEAR(Application Approved Date))]'>
+            <groupfilter function='crossjoin' user:ui-enumeration='all' user:ui-exclude='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:UnitOfMeasureName:nk]' />
+              <groupfilter function='level-members' level='[yr:APPLICATION_APPROVED_DATE:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.0kchunr0ucreps1faesn51swnx01].[avg:longitude:qk]' included-values='non-null' />
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[none:application_status:nk]'>
+            <groupfilter function='level-members' level='[none:application_status:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[yr:APPLICATION_APPROVED_DATE:ok]' filter-group='3'>
+            <groupfilter function='level-members' level='[yr:APPLICATION_APPROVED_DATE:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[avg:longitude:qk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[none:application_status:nk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[none:UnitOfMeasureName:nk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[none:ProductCategoryName:nk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[Exclusions (Unit Of Measure Name,YEAR(Application Approved Date))]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[Action (YEAR(Application Approved Date),Unit Of Measure Name)]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[yr:APPLICATION_APPROVED_DATE:ok]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[Action (YEAR(Sale Date),Unit Of Measure Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0kchunr0ucreps1faesn51swnx01].[avg:longitude:qk]' field-type='quantitative' max='-7760588.5038887328' min='-8052960.0934573272' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0kchunr0ucreps1faesn51swnx01].[avg:latitude:qk]' field-type='quantitative' max='5298199.1003161287' min='5136445.4725342421' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0kchunr0ucreps1faesn51swnx01].[none:application_status:nk]' />
+              <lod column='[federated.0kchunr0ucreps1faesn51swnx01].[none:business_name:nk]' />
+              <lod column='[federated.0kchunr0ucreps1faesn51swnx01].[none:APPLICATION_NUMBER:nk]' />
+              <lod column='[federated.0kchunr0ucreps1faesn51swnx01].[yr:APPLICATION_CREATED_DATE:ok]' />
+              <lod column='[federated.0kchunr0ucreps1faesn51swnx01].[none:BUSINESS_PHONE:nk]' />
+              <lod column='[federated.0kchunr0ucreps1faesn51swnx01].[none:BUSINESS_EMAIL:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='0.51574587821960449' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0kchunr0ucreps1faesn51swnx01].[avg:latitude:qk]</rows>
+        <cols>[federated.0kchunr0ucreps1faesn51swnx01].[avg:longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{9D171811-F078-4ABA-83F5-EE3115A93BD8}' />
+    </worksheet>
+    <worksheet name='Competitive Pricing Over Time for Grams'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Cannabis DB' name='federated.0kchunr0ucreps1faesn51swnx01' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0kchunr0ucreps1faesn51swnx01'>
+            <column caption='Application Approved Date' datatype='datetime' name='[APPLICATION_APPROVED_DATE]' role='dimension' type='ordinal' />
+            <column caption='Price per quantity' datatype='real' name='[Calculation_2796172446125121537]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[TotalPrice]/[Quantity]' />
+            </column>
+            <column caption='Product Category Name' datatype='string' name='[ProductCategoryName]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Quantity]' role='measure' type='quantitative' />
+            <column caption='Sale Date' datatype='date' name='[SaleDate]' role='dimension' type='ordinal' />
+            <column caption='Total Price' datatype='real' name='[TotalPrice]' role='measure' type='quantitative' />
+            <column caption='Unit Of Measure Name' datatype='string' name='[UnitOfMeasureName]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2796172446125121537]' derivation='Avg' name='[avg:Calculation_2796172446125121537:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ProductCategoryName]' derivation='None' name='[none:ProductCategoryName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[UnitOfMeasureName]' derivation='None' name='[none:UnitOfMeasureName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[APPLICATION_APPROVED_DATE]' derivation='Year' name='[yr:APPLICATION_APPROVED_DATE:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[SaleDate]' derivation='Year' name='[yr:SaleDate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[Exclusions (Unit Of Measure Name,YEAR(Application Approved Date))]'>
+            <groupfilter function='crossjoin' user:ui-enumeration='all' user:ui-exclude='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:UnitOfMeasureName:nk]' />
+              <groupfilter function='level-members' level='[yr:APPLICATION_APPROVED_DATE:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]' filter-group='4'>
+            <groupfilter function='level-members' level='[yr:SaleDate:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[none:ProductCategoryName:nk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[none:UnitOfMeasureName:nk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[Exclusions (Unit Of Measure Name,YEAR(Application Approved Date))]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.0kchunr0ucreps1faesn51swnx01].[avg:Calculation_2796172446125121537:qk]' field-type='quantitative' scope='rows' type='space' />
+            <format attr='height' field='[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]' value='20' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0kchunr0ucreps1faesn51swnx01].[avg:Calculation_2796172446125121537:qk]' value='C1033%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0kchunr0ucreps1faesn51swnx01].[avg:Calculation_2796172446125121537:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0kchunr0ucreps1faesn51swnx01].[avg:Calculation_2796172446125121537:qk]</rows>
+        <cols>[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]</cols>
+        <mark-labels>
+          <mark-label id='0'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0kchunr0ucreps1faesn51swnx01].[avg:Calculation_2796172446125121537:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0kchunr0ucreps1faesn51swnx01].[avg:Calculation_2796172446125121537:qk]</field>
+                  <field>[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>16.721275448153634</value>
+                <value>2023</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-52' y='3' />
+          </mark-label>
+          <mark-label id='1'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0kchunr0ucreps1faesn51swnx01].[avg:Calculation_2796172446125121537:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0kchunr0ucreps1faesn51swnx01].[avg:Calculation_2796172446125121537:qk]</field>
+                  <field>[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>37.704338911924054</value>
+                <value>2018</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='40' y='1' />
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{F97C1963-F7A9-42A3-8320-60C71E7F60AC}' />
+    </worksheet>
+    <worksheet name='Growth Over Time'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Yearly Sales in Grams</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Cannabis DB' name='federated.0kchunr0ucreps1faesn51swnx01' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0kchunr0ucreps1faesn51swnx01'>
+            <column caption='Application Approved Date' datatype='datetime' name='[APPLICATION_APPROVED_DATE]' role='dimension' type='ordinal' />
+            <column caption='Product Category Name' datatype='string' name='[ProductCategoryName]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Quantity]' role='measure' type='quantitative' />
+            <column caption='Sale Date' datatype='date' name='[SaleDate]' role='dimension' type='ordinal' />
+            <column caption='Unit Of Measure Name' datatype='string' name='[UnitOfMeasureName]' role='dimension' type='nominal' />
+            <column-instance column='[ProductCategoryName]' derivation='None' name='[none:ProductCategoryName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[UnitOfMeasureName]' derivation='None' name='[none:UnitOfMeasureName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Quantity]' derivation='Sum' name='[sum:Quantity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[APPLICATION_APPROVED_DATE]' derivation='Year' name='[yr:APPLICATION_APPROVED_DATE:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[SaleDate]' derivation='Year' name='[yr:SaleDate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[Exclusions (Unit Of Measure Name,YEAR(Application Approved Date))]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:UnitOfMeasureName:nk]' />
+                <groupfilter function='level-members' level='[yr:APPLICATION_APPROVED_DATE:ok]' />
+              </groupfilter>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='member' level='[none:UnitOfMeasureName:nk]' member='&quot;Grams&quot;' />
+                <groupfilter function='member' level='[yr:APPLICATION_APPROVED_DATE:ok]' member='%null%' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]' filter-group='4'>
+            <groupfilter function='level-members' level='[yr:SaleDate:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[none:UnitOfMeasureName:nk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[none:ProductCategoryName:nk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[Exclusions (Unit Of Measure Name,YEAR(Application Approved Date))]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.0kchunr0ucreps1faesn51swnx01].[sum:Quantity:qk]' field-type='quantitative' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height-header' value='21' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.0kchunr0ucreps1faesn51swnx01].[none:UnitOfMeasureName:nk]' />
+              <text column='[federated.0kchunr0ucreps1faesn51swnx01].[sum:Quantity:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0kchunr0ucreps1faesn51swnx01].[sum:Quantity:qk]</rows>
+        <cols>[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]</cols>
+        <mark-labels>
+          <mark-label id='0'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0kchunr0ucreps1faesn51swnx01].[sum:Quantity:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0kchunr0ucreps1faesn51swnx01].[none:UnitOfMeasureName:nk]</field>
+                  <field>[federated.0kchunr0ucreps1faesn51swnx01].[sum:Quantity:qk]</field>
+                  <field>[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Grams&quot;</value>
+                <value>124456103.20999986</value>
+                <value>2023</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-57' y='-1' />
+          </mark-label>
+          <mark-label id='1'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0kchunr0ucreps1faesn51swnx01].[sum:Quantity:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0kchunr0ucreps1faesn51swnx01].[none:UnitOfMeasureName:nk]</field>
+                  <field>[federated.0kchunr0ucreps1faesn51swnx01].[sum:Quantity:qk]</field>
+                  <field>[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Grams&quot;</value>
+                <value>16514010.85</value>
+                <value>2019</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-9' y='22' />
+          </mark-label>
+          <mark-label id='2'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0kchunr0ucreps1faesn51swnx01].[sum:Quantity:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0kchunr0ucreps1faesn51swnx01].[none:UnitOfMeasureName:nk]</field>
+                  <field>[federated.0kchunr0ucreps1faesn51swnx01].[sum:Quantity:qk]</field>
+                  <field>[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Grams&quot;</value>
+                <value>439370.40999999997</value>
+                <value>2018</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-4' y='25' />
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{D7A7C51A-1AC3-49A1-8D71-20A22F62791C}' />
+    </worksheet>
+    <worksheet name='Top Selling Products'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Cannabis DB' name='federated.0kchunr0ucreps1faesn51swnx01' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0kchunr0ucreps1faesn51swnx01'>
+            <column caption='Application Approved Date' datatype='datetime' name='[APPLICATION_APPROVED_DATE]' role='dimension' type='ordinal' />
+            <column caption='Product Category Name' datatype='string' name='[ProductCategoryName]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Quantity]' role='measure' type='quantitative' />
+            <column caption='Sale Date' datatype='date' name='[SaleDate]' role='dimension' type='ordinal' />
+            <column caption='Unit Of Measure Name' datatype='string' name='[UnitOfMeasureName]' role='dimension' type='nominal' />
+            <column-instance column='[ProductCategoryName]' derivation='None' name='[none:ProductCategoryName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[UnitOfMeasureName]' derivation='None' name='[none:UnitOfMeasureName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Quantity]' derivation='Sum' name='[sum:Quantity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[APPLICATION_APPROVED_DATE]' derivation='Year' name='[yr:APPLICATION_APPROVED_DATE:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[SaleDate]' derivation='Year' name='[yr:SaleDate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[Action (YEAR(Application Approved Date),Unit Of Measure Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6C24F91EBA6F4A28839E743B0EBCFF50]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:APPLICATION_APPROVED_DATE:ok]' />
+              <groupfilter function='level-members' level='[UnitOfMeasureName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[Action (YEAR(Sale Date),Unit Of Measure Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6C24F91EBA6F4A28839E743B0EBCFF50]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:SaleDate:ok]' />
+              <groupfilter function='level-members' level='[UnitOfMeasureName]' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0kchunr0ucreps1faesn51swnx01].[none:ProductCategoryName:nk]' direction='DESC' using='[federated.0kchunr0ucreps1faesn51swnx01].[sum:Quantity:qk]' />
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]' filter-group='4'>
+            <groupfilter function='level-members' level='[yr:SaleDate:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[none:ProductCategoryName:nk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[none:UnitOfMeasureName:nk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[Action (YEAR(Application Approved Date),Unit Of Measure Name)]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[Action (YEAR(Sale Date),Unit Of Measure Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0kchunr0ucreps1faesn51swnx01].[sum:Quantity:qk]' field-type='quantitative' min='0.0' range-type='fixedmin' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0kchunr0ucreps1faesn51swnx01].[none:ProductCategoryName:nk]' />
+              <text column='[federated.0kchunr0ucreps1faesn51swnx01].[sum:Quantity:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0kchunr0ucreps1faesn51swnx01].[none:ProductCategoryName:nk]</rows>
+        <cols>[federated.0kchunr0ucreps1faesn51swnx01].[sum:Quantity:qk]</cols>
+      </table>
+      <simple-id uuid='{8AB10699-0821-4084-AD69-1233AADB0FAF}' />
+    </worksheet>
+    <worksheet name='Total Companies Approved'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff'>Total Companies Approved</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Cannabis DB' name='federated.0kchunr0ucreps1faesn51swnx01' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0kchunr0ucreps1faesn51swnx01'>
+            <column caption='Application Approved Date' datatype='datetime' name='[APPLICATION_APPROVED_DATE]' role='dimension' type='ordinal' />
+            <column caption='Product Category Name' datatype='string' name='[ProductCategoryName]' role='dimension' type='nominal' />
+            <column caption='Sale Date' datatype='date' name='[SaleDate]' role='dimension' type='ordinal' />
+            <column caption='Unit Of Measure Name' datatype='string' name='[UnitOfMeasureName]' role='dimension' type='nominal' />
+            <column caption='Application Status' datatype='string' name='[application_status]' role='dimension' type='nominal' />
+            <column-instance column='[application_status]' derivation='Count' name='[cnt:application_status:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ProductCategoryName]' derivation='None' name='[none:ProductCategoryName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[UnitOfMeasureName]' derivation='None' name='[none:UnitOfMeasureName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[application_status]' derivation='None' name='[none:application_status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[APPLICATION_APPROVED_DATE]' derivation='Year' name='[yr:APPLICATION_APPROVED_DATE:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[SaleDate]' derivation='Year' name='[yr:SaleDate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[Action (YEAR(Application Approved Date),Unit Of Measure Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6C24F91EBA6F4A28839E743B0EBCFF50]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:APPLICATION_APPROVED_DATE:ok]' />
+              <groupfilter function='level-members' level='[UnitOfMeasureName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[Action (YEAR(Sale Date),Unit Of Measure Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6C24F91EBA6F4A28839E743B0EBCFF50]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:SaleDate:ok]' />
+              <groupfilter function='level-members' level='[UnitOfMeasureName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[none:application_status:nk]'>
+            <groupfilter function='member' level='[none:application_status:nk]' member='&quot;APPROVED&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[yr:APPLICATION_APPROVED_DATE:ok]' filter-group='3'>
+            <groupfilter function='level-members' level='[yr:APPLICATION_APPROVED_DATE:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[none:application_status:nk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[none:UnitOfMeasureName:nk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[none:ProductCategoryName:nk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[Action (YEAR(Application Approved Date),Unit Of Measure Name)]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[yr:APPLICATION_APPROVED_DATE:ok]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[Action (YEAR(Sale Date),Unit Of Measure Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#666666' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0kchunr0ucreps1faesn51swnx01].[cnt:application_status:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{79253899-BA5F-4F5F-9A0B-F00E9FCAA33E}' />
+    </worksheet>
+    <worksheet name='Total Companies Pending'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff'>Total Companies Pending and Reopened</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Cannabis DB' name='federated.0kchunr0ucreps1faesn51swnx01' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0kchunr0ucreps1faesn51swnx01'>
+            <column caption='Application Approved Date' datatype='datetime' name='[APPLICATION_APPROVED_DATE]' role='dimension' type='ordinal' />
+            <column caption='Product Category Name' datatype='string' name='[ProductCategoryName]' role='dimension' type='nominal' />
+            <column caption='Sale Date' datatype='date' name='[SaleDate]' role='dimension' type='ordinal' />
+            <column caption='Unit Of Measure Name' datatype='string' name='[UnitOfMeasureName]' role='dimension' type='nominal' />
+            <column caption='Application Status' datatype='string' name='[application_status]' role='dimension' type='nominal' />
+            <column-instance column='[application_status]' derivation='Count' name='[cnt:application_status:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ProductCategoryName]' derivation='None' name='[none:ProductCategoryName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[UnitOfMeasureName]' derivation='None' name='[none:UnitOfMeasureName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[application_status]' derivation='None' name='[none:application_status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[APPLICATION_APPROVED_DATE]' derivation='Year' name='[yr:APPLICATION_APPROVED_DATE:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[SaleDate]' derivation='Year' name='[yr:SaleDate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[Action (YEAR(Sale Date),Unit Of Measure Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_6C24F91EBA6F4A28839E743B0EBCFF50]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:SaleDate:ok]' />
+              <groupfilter function='level-members' level='[UnitOfMeasureName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[none:application_status:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:application_status:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:application_status:nk]' member='&quot;APPROVED&quot;' />
+                <groupfilter function='member' level='[none:application_status:nk]' member='%null%' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0kchunr0ucreps1faesn51swnx01].[yr:APPLICATION_APPROVED_DATE:ok]' filter-group='3'>
+            <groupfilter function='level-members' level='[yr:APPLICATION_APPROVED_DATE:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[none:application_status:nk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[none:UnitOfMeasureName:nk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[none:ProductCategoryName:nk]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[yr:APPLICATION_APPROVED_DATE:ok]</column>
+            <column>[federated.0kchunr0ucreps1faesn51swnx01].[Action (YEAR(Sale Date),Unit Of Measure Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#666666' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0kchunr0ucreps1faesn51swnx01].[yr:APPLICATION_APPROVED_DATE:ok]' value='Application Year' />
+            <format attr='background-color' value='#ffffff' />
+            <format attr='border-style' value='solid' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0kchunr0ucreps1faesn51swnx01].[cnt:application_status:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3ACEC9AA-DB0C-4EC7-91E9-594E62C98F5B}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Tenax Dashboard'>
+      <style />
+      <size maxheight='768' maxwidth='1024' minheight='768' minwidth='1024' preset-index='2' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Cannabis DB' name='federated.0kchunr0ucreps1faesn51swnx01' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0kchunr0ucreps1faesn51swnx01'>
+        <column caption='Product Category Name' datatype='string' name='[ProductCategoryName]' role='dimension' type='nominal' />
+        <column caption='Sale Date' datatype='date' name='[SaleDate]' role='dimension' type='ordinal' />
+        <column caption='Application Status' datatype='string' name='[application_status]' role='dimension' type='nominal' />
+        <column-instance column='[ProductCategoryName]' derivation='None' name='[none:ProductCategoryName:nk]' pivot='key' type='nominal' />
+        <column-instance column='[application_status]' derivation='None' name='[none:application_status:nk]' pivot='key' type='nominal' />
+        <column-instance column='[SaleDate]' derivation='Year' name='[yr:SaleDate:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='311' param='vert' type-v2='layout-flow' w='98438' x='781' y='1042'>
+            <zone h='97916' id='83' param='horz' type-v2='layout-flow' w='98438' x='781' y='1042'>
+              <zone h='97916' id='20' param='horz' type-v2='layout-flow' w='82032' x='781' y='1042'>
+                <zone h='97916' id='18' type-v2='layout-basic' w='82032' x='781' y='1042'>
+                  <zone h='76900' id='354' is-fixed='true' type-v2='layout-basic' w='38648' x='781' y='22058'>
+                    <zone h='38378' id='3' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='38648' x='781' y='22058'>
+                      <zone h='38412' id='17' name='Approved Distributions' w='38672' x='781' y='22005'>
+                        <layout-cache minheight='272' minwidth='202' type-h='scalable' type-w='scalable' />
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='solid' />
+                          <format attr='border-width' value='1' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                    </zone>
+                    <zone h='38522' id='355' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='38648' x='781' y='60436'>
+                      <zone h='38541' id='215' name='Top Selling Products' w='38672' x='781' y='60417'>
+                        <layout-cache fixed-size-h='198' type-h='fixed' type-w='fixed' />
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='solid' />
+                          <format attr='border-width' value='1' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                    </zone>
+                  </zone>
+                  <zone h='4590' id='5' param='horz' type-v2='layout-flow' w='41698' x='781' y='1042'>
+                    <zone fixed-size='523' forceUpdate='true' h='4590' id='6' is-fixed='true' type-v2='text' w='41698' x='781' y='1042'>
+                      <formatted-text>
+                        <run fontsize='15'>Tenax Strategies Cannabis Market Tracker</run>
+                        <run>Æ&#10;</run>
+                      </formatted-text>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                  <zone _.fcp.ExternalImageContentForZones.true...image-file-url='https://m.bbb.org/prod/ProfileImages/78a6b5d9-6216-4d2b-bb38-393cd39cf42d.png' h='8724' id='8' is-scaled='1' type-v2='bitmap' w='15820' x='56933' y='1042'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='38378' id='23' name='Growth Over Time' w='43384' x='39429' y='22058'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='1' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='12292' id='43' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='43372' x='39441' y='9766'>
+                    <zone h='12239' id='46' name='Total Companies Pending' w='43360' x='39453' y='9766'>
+                      <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='solid' />
+                        <format attr='border-width' value='1' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                  <zone h='12292' id='44' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='38660' x='781' y='9766'>
+                    <zone h='12239' id='45' name='Total Companies Approved' w='38672' x='781' y='9766'>
+                      <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='fixed' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='solid' />
+                        <format attr='border-width' value='1' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                  <zone h='8724' id='98' type-v2='dashboard-object' w='10060' x='72753' y='1042'>
+                    <button action='' button-type='text'>
+                      <toggle-action>tabdoc:toggle-button-click-action window-id=&quot;{B236F4CF-0A35-4EC5-A49A-35AB417E35FE}&quot; zone-id=&quot;98&quot; zone-ids=[97]</toggle-action>
+                      <button-visual-state>
+                        <caption>Hide Filters</caption>
+                        <button-caption-font-style fontcolor='#ffffff' fontname='Tableau Bold' fontsize='8' />
+                        <format attr='background-color' value='#333333' />
+                      </button-visual-state>
+                      <button-visual-state>
+                        <caption>Show FIlters</caption>
+                        <button-caption-font-style fontcolor='#ffffff' fontname='Tableau Bold' fontsize='8' />
+                        <format attr='background-color' value='#333333' />
+                      </button-visual-state>
+                    </button>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='38522' id='321' name='Competitive Pricing Over Time for Grams' w='43384' x='39429' y='60436'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='1' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone forceUpdate='true' h='4134' id='391' type-v2='text' w='41698' x='781' y='5632'>
+                    <formatted-text>
+                      <run>Data sourced from Cannabis Control Commission of Massachusetts</run>
+                    </formatted-text>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='8724' id='419' is-scaled='1' param='/Users/jeffreypan/Documents/Information Visualization/Github/DS4200-Project/ccc.png' type-v2='bitmap' w='14454' x='42479' y='1042'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='97916' id='97' param='vert' type-v2='layout-flow' w='16406' x='82813' y='1042'>
+                <zone h='21485' id='322' name='Competitive Pricing Over Time for Grams' param='[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]' type-v2='filter' values='database' w='16406' x='82813' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='56120' id='232' name='Growth Over Time' param='[federated.0kchunr0ucreps1faesn51swnx01].[none:ProductCategoryName:nk]' type-v2='filter' values='database' w='16406' x='82813' y='22527'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='14063' id='368' name='Approved Distributions' param='[federated.0kchunr0ucreps1faesn51swnx01].[none:application_status:nk]' type-v2='filter' values='database' w='16406' x='82813' y='78647'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='9505' id='127' name='Approved Distributions' pane-specification-id='2' param='[federated.0kchunr0ucreps1faesn51swnx01].[none:application_status:nk]' type-v2='color' w='8984' x='28516' y='32422' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1850' minheight='1850' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='433' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='432' param='vert' type-v2='layout-flow' w='98438' x='781' y='1042'>
+                <zone fixed-size='523' forceUpdate='true' h='4590' id='6' type-v2='text' w='41698' x='781' y='1042'>
+                  <formatted-text>
+                    <run fontsize='15'>Tenax Strategies Cannabis Market Tracker</run>
+                    <run>Æ&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='59' h='8724' id='419' is-fixed='true' is-scaled='1' param='/Users/jeffreypan/Documents/Information Visualization/Github/DS4200-Project/ccc.png' type-v2='bitmap' w='14454' x='42479' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.ExternalImageContentForZones.true...image-file-url='https://m.bbb.org/prod/ProfileImages/78a6b5d9-6216-4d2b-bb38-393cd39cf42d.png' fixed-size='59' h='8724' id='8' is-fixed='true' is-scaled='1' type-v2='bitmap' w='15820' x='56933' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4134' id='391' type-v2='text' w='41698' x='781' y='5632'>
+                  <formatted-text>
+                    <run>Data sourced from Cannabis Control Commission of Massachusetts</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='84' h='12239' id='45' is-fixed='true' name='Total Companies Approved' w='38672' x='781' y='9766'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='84' h='12239' id='46' is-fixed='true' name='Total Companies Pending' w='43360' x='39453' y='9766'>
+                  <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14063' id='368' mode='checkdropdown' name='Approved Distributions' param='[federated.0kchunr0ucreps1faesn51swnx01].[none:application_status:nk]' type-v2='filter' values='database' w='16406' x='82813' y='78647'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38412' id='17' is-fixed='true' name='Approved Distributions' w='38672' x='781' y='22005'>
+                  <layout-cache minheight='272' minwidth='202' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9505' id='127' name='Approved Distributions' pane-specification-id='2' param='[federated.0kchunr0ucreps1faesn51swnx01].[none:application_status:nk]' type-v2='color' w='8984' x='28516' y='32422'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='56120' id='232' mode='checkdropdown' name='Growth Over Time' param='[federated.0kchunr0ucreps1faesn51swnx01].[none:ProductCategoryName:nk]' type-v2='filter' values='database' w='16406' x='82813' y='22527'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38378' id='23' is-fixed='true' name='Growth Over Time' w='43384' x='39429' y='22058'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38541' id='215' is-fixed='true' name='Top Selling Products' w='38672' x='781' y='60417'>
+                  <layout-cache fixed-size-h='198' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='21485' id='322' mode='checkdropdown' name='Competitive Pricing Over Time for Grams' param='[federated.0kchunr0ucreps1faesn51swnx01].[yr:SaleDate:ok]' type-v2='filter' values='database' w='16406' x='82813' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38522' id='321' is-fixed='true' name='Competitive Pricing Over Time for Grams' w='43384' x='39429' y='60436'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{FE3A8F67-BB4A-41ED-A461-25E441372B40}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='Tenax Dashboard'>
+      <viewpoints>
+        <viewpoint name='Approved Distributions'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='1' />
+          <geo-search-visibility value='1' />
+          <default-map-tool-selection tool='1' />
+        </viewpoint>
+        <viewpoint name='Competitive Pricing Over Time for Grams'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Growth Over Time'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top Selling Products'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Total Companies Approved'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Companies Pending'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{B236F4CF-0A35-4EC5-A49A-35AB417E35FE}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Approved Distributions'>
+      <cards>
+        <edge name='left'>
+          <strip size='261'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='100'>
+            <card param='[federated.0kchunr0ucreps1faesn51swnx01].[yr:APPLICATION_APPROVED_DATE:ok]' type='filter' />
+            <card pane-specification-id='2' param='[federated.0kchunr0ucreps1faesn51swnx01].[none:application_status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{28290D90-295D-469C-966A-4BDCA79B1D0F}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Competitive Pricing Over Time for Grams'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C6186CE3-E548-4C16-BD50-D063A6A0AA0D}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Growth Over Time'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{88D74BE3-908D-4800-AFD3-C1B70A57270D}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Top Selling Products'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0kchunr0ucreps1faesn51swnx01].[none:ProductCategoryName:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{22EF0523-7DD1-4253-B61D-4E783C60057D}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Total Companies Approved'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0kchunr0ucreps1faesn51swnx01].[yr:APPLICATION_APPROVED_DATE:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B345B643-D0CF-44B8-A807-44FD54C4C811}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Total Companies Pending'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0kchunr0ucreps1faesn51swnx01].[yr:APPLICATION_APPROVED_DATE:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{157057AD-9E66-422B-BCFA-38F6EAAF68EB}' />
+    </window>
+  </windows>
+</workbook>
