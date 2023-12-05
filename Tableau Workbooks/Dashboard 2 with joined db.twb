@@ -2660,8 +2660,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1850' minheight='1850' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='431' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='430' param='vert' type-v2='layout-flow' w='98438' x='781' y='1042'>
+            <zone h='100000' id='433' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='432' param='vert' type-v2='layout-flow' w='98438' x='781' y='1042'>
                 <zone fixed-size='523' forceUpdate='true' h='4590' id='6' type-v2='text' w='41698' x='781' y='1042'>
                   <formatted-text>
                     <run fontsize='15'>Tenax Strategies Cannabis Market Tracker</run>
